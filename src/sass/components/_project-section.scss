@@ -1,0 +1,9 @@
+@use "../abstracts/" as a;
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  .project:nth-child(odd) {
+    align-self: flex-end;
+  }
+}

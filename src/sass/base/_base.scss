@@ -1,3 +1,5 @@
+@use "../abstracts/" as a;
+
 *,
 *::after,
 *::before {
@@ -26,7 +28,7 @@ body {
 }
 
 .background-container {
-  height: 400%;
+  height: auto;
   animation: BackgroundColor 18s ease-in-out infinite;
   overflow-x: hidden;
   position: relative;
@@ -44,11 +46,12 @@ body {
   animation: AnimationName 18s ease;
 
   &__section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     border: solid;
     border-color: white;
     border-width: 10px;
+    padding: a.$height-header 0;
   }
 }
 

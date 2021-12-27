@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Introduction() {
   return (
-    <section className="introduction main__section">
+    <section className="introduction">
       <div className="introduction__heading">
         <h1 className="introduction__heading--primary">Hello!</h1>
         <h1 className="introduction__heading--primary">

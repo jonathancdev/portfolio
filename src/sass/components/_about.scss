@@ -1,0 +1,17 @@
+@use "../abstracts/" as a;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  //start section after header
+  margin-top: a.$height-header;
+  &__img {
+    border: solid;
+    border-color: white;
+    border-radius: 100%;
+    height: 12rem;
+    width: 12rem;
+  }
+}

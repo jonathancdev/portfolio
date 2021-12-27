@@ -1,0 +1,14 @@
+@use "../abstracts/" as a;
+
+.skill-grid {
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+    margin: 1rem;
+  }
+}

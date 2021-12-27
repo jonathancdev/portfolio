@@ -1,6 +1,6 @@
 @use "../abstracts/" as a;
 .header {
-  height: 8rem;
+  height: a.$height-header;
   width: 100vw;
   background-color: red;
   border: solid;
