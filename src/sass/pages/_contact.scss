@@ -1,0 +1,108 @@
+@use "../abstracts/" as a;
+.contact {
+  margin-top: calc(#{a.$height-header});
+  margin-left: a.$height-header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include a.respond(mobile) {
+    margin-left: 0;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    color: a.$color-white;
+    font-size: 1.8rem;
+    font-family: Archivo;
+    font-weight: 800;
+    .form__element:nth-child(3n) .form__error-message {
+      animation: spacing 2s ease-in-out infinite;
+    }
+    .form__element:nth-child(4n) {
+      animation: spacing 2.5s ease-in-out infinite;
+    }
+    .form__element:nth-child(5n) {
+      animation: spacing 3s ease-in-out infinite;
+    }
+
+    .form__element {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem 0 1rem 0;
+      position: relative;
+    }
+    label {
+      color: a.$color-white;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      letter-spacing: 0.25rem;
+      padding: 0rem 0.25rem 0.25rem 0.25rem;
+    }
+    .form__error-message {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 1.25rem;
+      width: 80%;
+      color: a.$color-error;
+      padding: 0.25rem 0.25rem 0rem 0.25rem;
+      font-size: 1.25rem;
+      font-weight: 200;
+      pointer-events: none;
+      user-select: none;
+      background-color: a.$color-white;
+    }
+    @keyframes spacing {
+      0% {
+        letter-spacing: 0.125rem;
+        font-size: 1.2rem;
+      }
+
+      50% {
+        letter-spacing: 0.175rem;
+        font-size: 1.25rem;
+      }
+
+      100% {
+        letter-spacing: 0.125rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__heading-primary {
+    padding: 0.5rem 0 0 0;
+    color: a.$color-white;
+    font-size: 4rem;
+    font-family: Archivo;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+  }
+  &__heading-secondary,
+  &__heading-secondary--underline {
+    padding: 0.5rem 0 0 0;
+    color: a.$color-white;
+    font-size: 2.2rem;
+    font-family: Archivo;
+    font-weight: 200;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  &__heading-secondary--underline {
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: 800;
+    opacity: 0.75;
+    margin: 0 0 1rem 0;
+    transition: transform 0.2s ease;
+    letter-spacing: 0.26rem;
+    &:hover {
+      transform: scale(102%);
+    }
+  }
+  .btn--submit {
+    margin-top: 0.5rem;
+  }
+}

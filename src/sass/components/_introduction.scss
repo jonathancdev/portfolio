@@ -1,0 +1,12 @@
+@use "../abstracts/" as a;
+
+.introduction {
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+  height: 100vh;
+  width: 100%;
+  border: solid;
+  border-color: white;
+  border-width: 10px;
+}

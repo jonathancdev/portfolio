@@ -1,0 +1,42 @@
+@use "../abstracts/" as a;
+
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+
+  &__hero {
+    height: auto;
+    width: 70vw;
+    max-width: 60rem;
+    border: solid;
+    border-color: a.$color-white;
+    background-color: a.$color-white;
+    padding: 1rem;
+    opacity: 0.75;
+
+    margin: 3rem;
+    .iframe--wrap {
+      position: relative;
+      height: 100%;
+      //paddding top/bottom determines size of iframe
+      padding: 20vw 0rem;
+      @include a.respond(mobile) {
+        padding: 15vw 0rem;
+      }
+      width: 100%;
+    }
+    .iframe {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0 0rem;
+      border: none;
+    }
+  }
+  &-feed {
+    margin-top: 2rem;
+  }
+}

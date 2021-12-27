@@ -1,0 +1,111 @@
+@use "../abstracts/" as a;
+.header {
+  height: a.$height-header;
+  display: flex;
+  background-color: a.$color-white;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  &__banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &__logo {
+    font-family: Foundation;
+    font-size: 3.8rem;
+    color: a.$color-black;
+    transition: all 0.3s ease;
+
+    @include a.respond(mobile) {
+      font-size: 2.375rem;
+    }
+    @include a.respond(smallmobile) {
+      font-size: 2rem;
+    }
+    &:hover {
+      color: a.$color-white;
+      -webkit-text-stroke-width: 1.5px;
+      -webkit-text-stroke-color: a.$color-black;
+      transform: translateY(-0.1rem) scale(1);
+      transition: all 0.5s ease;
+    }
+    &:active {
+      transform: translateY(0.1rem) scale(0.98);
+    }
+  }
+}
+
+.hamburger {
+  height: a.$height-header;
+  width: a.$height-header;
+  background-color: a.$color-black;
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__icon {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__line {
+    width: 4rem;
+    height: 0.4rem;
+    background-color: a.$color-white;
+    transition: all 0.15s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    margin: 0.4rem;
+
+    &:nth-child(2) {
+      opacity: 1;
+      transition: height 0.08s ease-in-out, opacity 0.5s ease,
+        width 0.1s ease-in;
+    }
+  }
+
+  &.open {
+    .hamburger__icon {
+      position: relative;
+      background-color: white;
+      height: calc(a.$height-header/2);
+      width: calc(a.$height-header/2);
+      pointer-events: none;
+    }
+
+    .hamburger__line {
+      position: absolute;
+      width: 3.5rem;
+      height: 0.4rem;
+      background-color: a.$color-black;
+      top: 17px;
+
+      &:nth-child(1) {
+        transform: rotate(135deg) translate(0);
+      }
+      &:nth-child(3) {
+        transform: rotate(-135deg) translate(0);
+      }
+      &:nth-child(2) {
+        width: 0px;
+        height: 0.1rem;
+        opacity: 0;
+      }
+    }
+  }
+}

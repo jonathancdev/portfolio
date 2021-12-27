@@ -1,0 +1,9 @@
+@use "../abstracts/" as a;
+.introduction {
+  &__heading {
+    &--primary {
+      color: a.$color-white;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+  }
+}
