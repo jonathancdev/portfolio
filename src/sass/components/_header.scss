@@ -1,0 +1,15 @@
+@use "../abstracts/" as a;
+.header {
+  height: 8rem;
+  width: 100vw;
+  background-color: red;
+  border: solid;
+  border-color: red;
+  //start below first section
+  position: absolute;
+  top: 100vh;
+  &.fixed {
+    position: fixed;
+    top: 0;
+  }
+}
