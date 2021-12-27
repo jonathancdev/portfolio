@@ -2,11 +2,18 @@
 $color-black: #000000;
 $color-black-50: rgba(0, 0, 0, 0.5);
 $color-black-75: rgba(0, 0, 0, 0.75);
-
 $color-white: #ffffff;
+$color-white-50: rgba(255, 255, 255, 0.5);
 
-$color-error: rgba(204, 61, 36, 0.959);
-//layout
+$color-grey-light: #cedaea;
+
+$color-blue-dark: #29344f;
+$color-blue-medium: #5b78b0;
+$color-blue-light: #86a4c8;
+$color-blue-dark-50: rgba(41, 52, 79, 0.5);
+$color-blue-medium-50: rgb(91, 120, 176, 0.5);
+$color-blue-light-50: rgb(134, 164, 200, 0.5);
+
+//height
 $height-header: 9rem;
 $height-footer: 15rem;
-$margin-top-page: 5rem;

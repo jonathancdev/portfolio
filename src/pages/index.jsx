@@ -7,8 +7,8 @@ import ProjectSection from "../components/ProjectSection";
 import Project from "../components/Project";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-
 import useScrollPosition from "../hooks/useScrollPosition";
+
 const IndexPage = () => {
   const { headerShouldBeFixed, handleScroll } = useScrollPosition();
 
@@ -27,6 +27,7 @@ const IndexPage = () => {
         <Contact />
         <Footer />
       </section>
+      {/* <ScrollToTopButton/> */}
     </div>
   );
 };

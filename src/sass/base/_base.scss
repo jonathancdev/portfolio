@@ -38,24 +38,21 @@ body {
   width: 100%;
   background: linear-gradient(
     270deg,
-    rgba(91, 119, 176, 0.505),
-    hsla(223, 32%, 24%, 0.505),
-    rgba(0, 0, 0, 0.505)
+    rgb(91, 120, 176, 0.5),
+    rgba(41, 52, 79, 0.5),
+    rgba(0, 0, 0, 0.5)
   );
   background-size: 400% 400%;
-  animation: AnimationName 18s ease;
+  animation: BackgroundGradient 18s ease;
 
   &__section {
     min-height: 100vh;
     width: 100%;
-    border: solid;
-    border-color: white;
-    border-width: 10px;
     padding: a.$height-header 0;
   }
 }
 
-@keyframes AnimationName {
+@keyframes BackgroundGradient {
   0% {
     background-position: 0% 46%;
   }

@@ -36,20 +36,17 @@ body {
 .main {
   height: 100%;
   width: 100%;
-  background: linear-gradient(270deg, rgba(91, 119, 176, 0.505), rgba(42, 53, 81, 0.505), rgba(0, 0, 0, 0.505));
+  background: linear-gradient(270deg, rgba(91, 120, 176, 0.5), rgba(41, 52, 79, 0.5), rgba(0, 0, 0, 0.5));
   background-size: 400% 400%;
-  animation: AnimationName 18s ease;
+  animation: BackgroundGradient 18s ease;
 }
 .main__section {
   min-height: 100vh;
   width: 100%;
-  border: solid;
-  border-color: white;
-  border-width: 10px;
   padding: 9rem 0;
 }
 
-@keyframes AnimationName {
+@keyframes BackgroundGradient {
   0% {
     background-position: 0% 46%;
   }
@@ -86,12 +83,28 @@ span {
   color: #ffffff;
 }
 
+h1,
+h2,
+h3,
+span {
+  font-family: "Inconsolata";
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+
+p,
+div {
+  font-family: "Karla";
+}
+
 .section__heading--primary {
   width: 100%;
   text-align: center;
   font-size: clamp(2.5rem, 6vw, 4rem);
   padding: 2rem;
   margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 .introduction__heading--primary {
@@ -104,17 +117,76 @@ span {
   padding: 4rem 5rem;
 }
 
-.fa-times__close {
-  color: #ffffff;
-  font-size: 1.5rem;
+.navlink {
+  color: #cedaea;
+  font-size: clamp(1.8rem, 2.5vw, 3.5rem);
+  text-transform: uppercase;
+  font-weight: 200;
+  cursor: pointer;
+  font-family: "Inconsolata";
+}
+.navlink:not(:last-child) {
+  margin-right: 10%;
+}
+.navlink.active {
+  color: #86a4c8;
 }
 
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata/Inconsolata-Black.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata/Inconsolata-ExtraBold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata/Inconsolata-Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata/Inconsolata-SemiBold.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata/Inconsolata-Medium.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata/Inconsolata-Regular.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata/Inconsolata-Light.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata/Inconsolata-ExtraLight.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Karla";
+  src: url("../fonts/Karla/Karla-Bold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Karla";
+  src: url("../fonts/Karla/Karla-Regular.ttf");
+  font-weight: 400;
+}
 .header {
   height: 9rem;
   width: 100vw;
-  background-color: red;
-  border: solid;
-  border-color: red;
+  background-color: #29344f;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   position: absolute;
   top: 100vh;
 }
@@ -123,14 +195,20 @@ span {
   top: 0;
 }
 
+.navlinks {
+  padding: 0 1rem;
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .introduction {
   display: flex;
   align-items: center;
   height: 100vh;
   width: 100%;
-  border: solid;
-  border-color: white;
-  border-width: 10px;
   padding: 5rem;
 }
 
@@ -139,7 +217,7 @@ span {
   flex-direction: column;
   align-items: center;
   padding: 5rem;
-  margin-top: 9rem;
+  padding-top: 9rem;
 }
 .about__img {
   border: solid;
@@ -178,8 +256,7 @@ span {
 
 .footer {
   height: 15rem;
-  border: solid;
-  border-color: yellow;
+  background-color: rgba(41, 52, 79, 0.5);
 }
 
 .home {

@@ -8,6 +8,18 @@ div,
 span {
   color: a.$color-white;
 }
+h1,
+h2,
+h3,
+span {
+  font-family: "Inconsolata";
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+p,
+div {
+  font-family: "Karla";
+}
 .section {
   &__heading {
     &--primary {
@@ -16,6 +28,8 @@ span {
       font-size: clamp(2.5rem, 6vw, 4rem);
       padding: 2rem;
       margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-weight: 800;
     }
   }
 }
@@ -31,5 +45,19 @@ span {
     font-size: clamp(1.8rem, 2.8vw, 2.5rem);
     text-align: center;
     padding: 4rem 5rem;
+  }
+}
+.navlink {
+  color: a.$color-grey-light;
+  font-size: clamp(1.8rem, 2.5vw, 3.5rem);
+  text-transform: uppercase;
+  font-weight: 200;
+  cursor: pointer;
+  font-family: "Inconsolata";
+  &:not(:last-child) {
+    margin-right: 10%;
+  }
+  &.active {
+    color: a.$color-blue-light;
   }
 }

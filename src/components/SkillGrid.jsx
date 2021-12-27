@@ -7,7 +7,7 @@ export default function SkillGrid() {
     { skill: "css", image: "" },
     { skill: "html", image: "" },
     { skill: "graphql", image: "" },
-    { skill: "gatsbu", image: "" },
+    { skill: "gatsby", image: "" },
     { skill: "nextjs", image: "" },
   ];
   return (
