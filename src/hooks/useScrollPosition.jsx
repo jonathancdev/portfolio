@@ -5,22 +5,16 @@ export default function useScrollPosition() {
   const [currentSection, setCurrentSection] = useState("home");
   // const sections = ["home", "about", "projectsection", "contact"];
   const getActiveSection = () => {
-    // sections.forEach((section) => {
-    //   const sectionTop = document.getElementById(section).offsetTop;
-    //   if (window.scrollY >= sectionTop) {
-    //     setCurrentSection(section);
-    //   }
-    // });
     const y = window.scrollY;
     const home = document.getElementById("home");
     const about = document.getElementById("about");
     const projectsection = document.getElementById("projectsection");
     const contact = document.getElementById("contact");
-    if (y >= contact.offsetTop) {
+    if (y >= contact.offsetTop - 250) {
       setCurrentSection("contact");
-    } else if (y >= projectsection.offsetTop) {
+    } else if (y >= projectsection.offsetTop - 250) {
       setCurrentSection("projectsection");
-    } else if (y >= about.offsetTop) {
+    } else if (y >= about.offsetTop - 250) {
       setCurrentSection("about");
     } else if (y >= home.offsetTop) {
       setCurrentSection("home");

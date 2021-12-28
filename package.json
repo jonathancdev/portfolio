@@ -16,6 +16,10 @@
     "compile:sass": "sass src/sass/main.scss src/css/App.css -w"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-regular-svg-icons": "^6.0.0-beta3",
+    "@fortawesome/free-solid-svg-icons": "^6.0.0-beta3",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "framer-motion": "^5.5.5",

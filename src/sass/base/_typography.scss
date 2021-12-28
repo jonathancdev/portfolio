@@ -32,6 +32,7 @@ button {
       margin-bottom: 2rem;
       text-transform: uppercase;
       font-weight: 800;
+      border-radius: 15px;
     }
   }
 }
@@ -51,17 +52,20 @@ button {
 }
 .navlink {
   color: a.$color-grey-light;
-  font-size: clamp(1.8rem, 2.5vw, 3.5rem);
+  font-size: clamp(1.6rem, 2.75vw, 2.5rem);
   text-transform: uppercase;
   font-weight: 200;
   cursor: pointer;
   font-family: "Inconsolata";
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   &:not(:last-child) {
     margin-right: 10%;
   }
   &.active {
     color: a.$color-blue-light;
+    font-weight: 300;
+
+    transform: scale(1.1);
     transition: all 0.2s ease-in-out;
   }
 }

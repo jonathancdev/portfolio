@@ -62,6 +62,6 @@ button {
   &:active {
     box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
     color: a.$color-grey-light-50;
-    transform: translate(-49%, -49%) scale(0.98);
+    transform: translate(1px, 2px) scale(0.98);
   }
 }

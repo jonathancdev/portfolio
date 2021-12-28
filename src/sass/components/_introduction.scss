@@ -8,15 +8,34 @@
   height: 100vh;
   width: 100%;
   padding: 5rem;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
   &__heading {
     z-index: 1;
   }
   &__button {
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 15rem;
-    height: 5rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:active {
+      .arrow-down-icon {
+        opacity: 0.25;
+        transition: all 0.1s ease-in-out;
+      }
+    }
+  }
+  .arrow-down-icon {
+    height: 2.5rem;
+    margin-top: 0.25rem;
+    opacity: 0.5;
+    transition: all 0.1s ease-in-out;
   }
 }
