@@ -1,21 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { scrollTo } from "../utils/scrollTo";
 
-const Header = ({ fixed }) => {
-  const [activeLink, setActiveLink] = useState("home");
-
-  const handleScroll = (e) => {
-    console.log(e);
-  };
+const Header = ({ fixed, activeLink, updateActiveLink }) => {
   const handleClick = (section) => {
     scrollTo(section);
-    setActiveLink(section);
+    updateActiveLink(section);
   };
   return (
-    <header
-      onScroll={handleScroll}
-      className={fixed ? "header fixed" : "header"}
-    >
+    <header className={fixed ? "header fixed" : "header"}>
       <nav>
         <ul className="navlinks">
           <span

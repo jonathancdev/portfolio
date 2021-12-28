@@ -1,3 +1,31 @@
+@keyframes BackgroundGradient {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+@keyframes BackgroundColor {
+  0% {
+    background-color: #29344f;
+  }
+  50% {
+    background-color: #181f2f;
+  }
+  70% {
+    background-color: #1b2132;
+  }
+  90% {
+    background-color: #1f273b;
+  }
+  100% {
+    background-color: #29344f;
+  }
+}
 *,
 *::after,
 *::before {
@@ -28,7 +56,6 @@ body {
 
 .background-container {
   height: auto;
-  animation: BackgroundColor 18s ease-in-out infinite;
   overflow-x: hidden;
   position: relative;
 }
@@ -36,8 +63,7 @@ body {
 .main {
   height: 100%;
   width: 100%;
-  background: linear-gradient(270deg, rgba(91, 120, 176, 0.5), rgba(41, 52, 79, 0.5), rgba(0, 0, 0, 0.5));
-  background-size: 400% 400%;
+  background-color: #29344f;
   animation: BackgroundGradient 18s ease;
 }
 .main__section {
@@ -46,41 +72,27 @@ body {
   padding: 9rem 0;
 }
 
-@keyframes BackgroundGradient {
-  0% {
-    background-position: 0% 46%;
-  }
-  50% {
-    background-position: 100% 55%;
-  }
-  100% {
-    background-position: 0% 46%;
-  }
+button {
+  background-color: inherit;
+  border-radius: 15px;
+  box-shadow: 1px 1px 4px #1c2336, -2px -2px 3px #364568;
+  border: none;
+  cursor: pointer;
+  transition: all 0.05s linear;
 }
-@keyframes BackgroundColor {
-  0% {
-    background-color: #29344f;
-  }
-  50% {
-    background-color: #181f2f;
-  }
-  70% {
-    background-color: #1b2132;
-  }
-  90% {
-    background-color: #1f273b;
-  }
-  100% {
-    background-color: #29344f;
-  }
+button:active {
+  box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
+  color: rgba(206, 218, 234, 0.5);
+  transform: translate(-49%, -49%) scale(0.98);
 }
+
 p,
 h1,
 h2,
 h3,
 div,
 span {
-  color: #ffffff;
+  color: #cedaea;
 }
 
 h1,
@@ -93,8 +105,10 @@ span {
 }
 
 p,
-div {
+div,
+button {
   font-family: "Karla";
+  color: #cedaea;
 }
 
 .section__heading--primary {
@@ -124,12 +138,21 @@ div {
   font-weight: 200;
   cursor: pointer;
   font-family: "Inconsolata";
+  transition: all 0.2s ease-in-out;
 }
 .navlink:not(:last-child) {
   margin-right: 10%;
 }
 .navlink.active {
   color: #86a4c8;
+  transition: all 0.2s ease-in-out;
+}
+
+button {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: rgba(206, 218, 234, 0.75);
+  font-family: "Inconsolata";
+  font-weight: 100;
 }
 
 @font-face {
@@ -205,11 +228,24 @@ div {
 }
 
 .introduction {
+  position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
   width: 100%;
   padding: 5rem;
+}
+.introduction__heading {
+  z-index: 1;
+}
+.introduction__button {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  height: 5rem;
 }
 
 .about {
@@ -231,10 +267,11 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 100%;
+  border: none;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px #1c2336, -1px -1px 1px #364568;
   margin: 1rem;
 }
 

@@ -6,7 +6,7 @@ h2,
 h3,
 div,
 span {
-  color: a.$color-white;
+  color: a.$color-grey-light;
 }
 h1,
 h2,
@@ -17,8 +17,10 @@ span {
   letter-spacing: 0.2rem;
 }
 p,
-div {
+div,
+button {
   font-family: "Karla";
+  color: a.$color-grey-light;
 }
 .section {
   &__heading {
@@ -54,10 +56,18 @@ div {
   font-weight: 200;
   cursor: pointer;
   font-family: "Inconsolata";
+  transition: all 0.2s ease-in-out;
   &:not(:last-child) {
     margin-right: 10%;
   }
   &.active {
     color: a.$color-blue-light;
+    transition: all 0.2s ease-in-out;
   }
+}
+button {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: a.$color-grey-light-75;
+  font-family: "Inconsolata";
+  font-weight: 100;
 }

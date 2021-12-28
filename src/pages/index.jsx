@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import "../css/App.css";
 import Header from "../components/Header";
 import Introduction from "../components/Introduction";
@@ -10,13 +11,27 @@ import Footer from "../components/Footer";
 import useScrollPosition from "../hooks/useScrollPosition";
 
 const IndexPage = () => {
-  const { headerShouldBeFixed, handleScroll } = useScrollPosition();
+  const { headerShouldBeFixed, handleScroll, currentSection } =
+    useScrollPosition();
+  const [activeLink, setActiveLink] = useState("home");
 
+  const updateActiveLink = (section) => {
+    setActiveLink(section);
+  };
+
+  useEffect(() => {
+    setActiveLink(currentSection);
+  }, [currentSection]);
+  console.log(activeLink);
   return (
     <div className="background-container">
-      <Header fixed={headerShouldBeFixed} />
-      <section className="main" onClick={handleScroll}>
-        <Introduction />
+      <Header
+        fixed={headerShouldBeFixed}
+        activeLink={activeLink}
+        updateActiveLink={updateActiveLink}
+      />
+      <section className="main">
+        <Introduction updateActiveLink={updateActiveLink} />
         <About />
         <ProjectSection>
           <Project />

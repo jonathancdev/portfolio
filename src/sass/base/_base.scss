@@ -29,20 +29,21 @@ body {
 
 .background-container {
   height: auto;
-  animation: BackgroundColor 18s ease-in-out infinite;
+  // animation: BackgroundColor 18s ease-in-out infinite;
   overflow-x: hidden;
   position: relative;
 }
 .main {
   height: 100%;
   width: 100%;
-  background: linear-gradient(
-    270deg,
-    rgb(91, 120, 176, 0.5),
-    rgba(41, 52, 79, 0.5),
-    rgba(0, 0, 0, 0.5)
-  );
-  background-size: 400% 400%;
+  // background: linear-gradient(
+  //   270deg,
+  //   rgb(91, 120, 176, 0.5),
+  //   rgba(41, 52, 79, 0.5),
+  //   rgba(0, 0, 0, 0.5)
+  // );
+  // background-size: 400% 400%;
+  background-color: #29344f;
   animation: BackgroundGradient 18s ease;
 
   &__section {
@@ -51,32 +52,16 @@ body {
     padding: a.$height-header 0;
   }
 }
-
-@keyframes BackgroundGradient {
-  0% {
-    background-position: 0% 46%;
-  }
-  50% {
-    background-position: 100% 55%;
-  }
-  100% {
-    background-position: 0% 46%;
-  }
-}
-@keyframes BackgroundColor {
-  0% {
-    background-color: #29344f;
-  }
-  50% {
-    background-color: #181f2f;
-  }
-  70% {
-    background-color: #1b2132;
-  }
-  90% {
-    background-color: #1f273b;
-  }
-  100% {
-    background-color: #29344f;
+button {
+  background-color: inherit;
+  border-radius: 15px;
+  box-shadow: 1px 1px 4px #1c2336, -2px -2px 3px #364568;
+  border: none;
+  cursor: pointer;
+  transition: all 0.05s linear;
+  &:active {
+    box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
+    color: a.$color-grey-light-50;
+    transform: translate(-49%, -49%) scale(0.98);
   }
 }
