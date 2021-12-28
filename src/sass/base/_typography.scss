@@ -75,3 +75,13 @@ button {
   font-family: "Inconsolata";
   font-weight: 100;
 }
+.skill-grid {
+  &__heading--primary {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    padding: 1rem 0;
+  }
+}

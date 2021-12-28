@@ -9,6 +9,7 @@ module.exports = {
 
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -19,6 +20,14 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

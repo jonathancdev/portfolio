@@ -12,6 +12,7 @@ export default function About() {
         odio possimus, soluta quos at quod quam eius dolorem cupiditate
         reprehenderit dicta quaerat!
       </p>
+      <h1 className="skill-grid__heading--primary">skills</h1>
       <SkillGrid />
     </section>
   );

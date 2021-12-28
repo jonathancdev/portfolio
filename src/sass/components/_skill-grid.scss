@@ -1,15 +1,28 @@
 @use "../abstracts/" as a;
 
 .skill-grid {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 11rem);
+
   &__item {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    height: 8rem;
-    width: 8rem;
+    height: 9rem;
+    width: 9rem;
     border-radius: 15px;
     box-shadow: 1px 1px 1px #1c2336, -1px -1px 1px #364568;
     margin: 1rem;
+    z-index: 0;
+  }
+
+  &__name {
+    position: absolute;
+    bottom: 0.25rem;
+    text-transform: uppercase;
   }
 }
