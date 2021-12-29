@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 export default function useScrollPosition() {
   const [headerShouldBeFixed, setHeaderShouldBeFixed] = useState(false);
+  const [arrowButtonShouldBeVisible, setArrowButtonShouldBeVisible] =
+    useState(false);
   const [currentSection, setCurrentSection] = useState("home");
   // const sections = ["home", "about", "projectsection", "contact"];
   const getActiveSection = () => {
@@ -27,9 +29,17 @@ export default function useScrollPosition() {
       setHeaderShouldBeFixed(false);
     }
   };
+  const setButtonVisibility = () => {
+    if (window.scrollY >= window.innerHeight) {
+      setArrowButtonShouldBeVisible(true);
+    } else if (window.scrollY <= window.innerHeight) {
+      setArrowButtonShouldBeVisible(false);
+    }
+  };
   const handleScroll = () => {
     getActiveSection();
     setHeaderPosition();
+    setButtonVisibility();
   };
 
   useEffect(() => {
@@ -39,5 +49,10 @@ export default function useScrollPosition() {
     };
   }, []);
 
-  return { handleScroll, headerShouldBeFixed, currentSection };
+  return {
+    handleScroll,
+    arrowButtonShouldBeVisible,
+    headerShouldBeFixed,
+    currentSection,
+  };
 }

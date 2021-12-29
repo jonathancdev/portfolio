@@ -9,10 +9,15 @@ import Project from "../components/Project";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import useScrollPosition from "../hooks/useScrollPosition";
+import arrowIcon from "../images/arrowdown.png";
 
 const IndexPage = () => {
-  const { headerShouldBeFixed, handleScroll, currentSection } =
-    useScrollPosition();
+  const {
+    headerShouldBeFixed,
+    arrowButtonShouldBeVisible,
+    handleScroll,
+    currentSection,
+  } = useScrollPosition();
   const [activeLink, setActiveLink] = useState("home");
 
   const updateActiveLink = (section) => {
@@ -41,7 +46,18 @@ const IndexPage = () => {
         </ProjectSection>
         <Contact />
         <Footer />
+        <button
+          className={
+            arrowButtonShouldBeVisible
+              ? "scroll-to-top__button visible"
+              : "scroll-to-top__button"
+          }
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img src={arrowIcon} alt="arrow" className="arrow-up-icon" />
+        </button>
       </section>
+
       {/* <ScrollToTopButton/> */}
     </div>
   );

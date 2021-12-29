@@ -52,7 +52,7 @@ button {
 }
 .navlink {
   color: a.$color-grey-light;
-  font-size: clamp(1.6rem, 2.75vw, 2.5rem);
+  font-size: clamp(1.3rem, 2.25vw, 2.5rem);
   text-transform: uppercase;
   font-weight: 200;
   cursor: pointer;
@@ -83,5 +83,8 @@ button {
     text-transform: uppercase;
     font-weight: 200;
     padding: 1rem 0;
+  }
+  &__name {
+    font-size: 1.5rem;
   }
 }

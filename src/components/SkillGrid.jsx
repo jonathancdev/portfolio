@@ -18,8 +18,10 @@ export default function SkillGrid() {
       {skills.map((skill) => {
         return (
           <div key={skill.skill} className="skill-grid__item">
-            <Icon name={skill.skill} color={skill.color} size="5rem" />
-            <span className="skill-grid__name">{skill.name}</span>
+            <div className="skill-grid__content">
+              <Icon name={skill.skill} color={skill.color} size="5rem" />
+              <span className="skill-grid__name">{skill.name}</span>
+            </div>
           </div>
         );
       })}
