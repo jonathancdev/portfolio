@@ -42,6 +42,9 @@ button {
       font-size: clamp(2.5rem, 6vw, 4rem);
     }
   }
+  span {
+    color: #5b78b0;
+  }
 }
 .about {
   &__text {
@@ -76,6 +79,9 @@ textarea {
   color: a.$color-grey-light;
   text-align: center;
   text-transform: uppercase;
+  &::placeholder {
+    color: a.$color-grey-light-75;
+  }
 }
 button {
   font-size: clamp(1.8rem, 3vw, 2.5rem);

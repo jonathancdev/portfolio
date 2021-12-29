@@ -93,7 +93,8 @@ textarea {
   max-width: 30rem;
   min-height: 3rem;
   max-height: 15rem;
-  padding-top: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 
 button,
@@ -194,6 +195,9 @@ button {
 .introduction__heading--primary {
   font-size: clamp(2.5rem, 6vw, 4rem);
 }
+.introduction span {
+  color: #5b78b0;
+}
 
 .about__text {
   font-size: clamp(1.8rem, 2.8vw, 2.5rem);
@@ -227,6 +231,10 @@ textarea {
   color: #cedaea;
   text-align: center;
   text-transform: uppercase;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgba(206, 218, 234, 0.75);
 }
 
 button {

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+
 import "../css/App.css";
 import Header from "../components/Header";
 import Introduction from "../components/Introduction";
@@ -10,7 +11,6 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import useScrollPosition from "../hooks/useScrollPosition";
 import arrowIcon from "../images/arrowdown.png";
-
 const IndexPage = () => {
   const {
     headerShouldBeFixed,
