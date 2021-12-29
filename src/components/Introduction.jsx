@@ -12,7 +12,7 @@ export default function Introduction({ updateActiveLink }) {
         <div className="introduction__heading">
           <h1 className="introduction__heading--primary">Hello!</h1>
           <h1 className="introduction__heading--primary">
-            My name is <span>Jonathan</span>.
+            My name is <span>Jonathan C</span>.
           </h1>
           <h1 className="introduction__heading--primary">
             I'm a web developer.

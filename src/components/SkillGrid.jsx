@@ -12,6 +12,7 @@ export default function SkillGrid() {
     { skill: "nextjs", name: "next.js", color: "#000000" },
     { skill: "git", name: "git", color: "#F05032" },
     { skill: "figma", name: "figma", color: "#F24E1E" },
+    { skill: "sass", name: "sass", color: "#CC6699" },
   ];
   return (
     <section className="skill-grid">
@@ -19,7 +20,7 @@ export default function SkillGrid() {
         return (
           <div key={skill.skill} className="skill-grid__item">
             <div className="skill-grid__content">
-              <Icon name={skill.skill} color={skill.color} size="5rem" />
+              <Icon name={skill.skill} color={skill.color} size="4rem" />
               <span className="skill-grid__name">{skill.name}</span>
             </div>
           </div>

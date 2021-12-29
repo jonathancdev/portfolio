@@ -4,7 +4,7 @@
   display: grid;
   align-content: center;
   justify-content: center;
-  grid-template-columns: repeat(3, 13rem);
+  grid-template-columns: repeat(5, 10rem);
   grid-gap: 1rem;
 
   &__item {
@@ -13,8 +13,8 @@
     justify-content: center;
     align-items: center;
     border: none;
-    height: 12rem;
-    width: 12rem;
+    height: 9rem;
+    width: 9rem;
     border-radius: 15px;
     box-shadow: 1px -1px 1px #1c2336, -1px 1px 1px #364568;
     margin: 0.5rem;
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     opacity: 0.75;
   }
   &__name {

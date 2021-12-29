@@ -72,6 +72,7 @@ textarea {
   max-width: 30rem;
   min-height: 3rem;
   max-height: 15rem;
+  padding-top: 5rem;
 }
 
 button,
@@ -97,19 +98,25 @@ button,
   border-radius: 100%;
   top: 88vh;
   left: 85.5vw;
-  opacity: 0;
-  transform: translateY(30rem);
-  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  transform: translate(0, 30rem) scale(1);
+  transition: transform 0.5s ease-in-out;
   &.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.4s linear 0.5s;
+    opacity: 0.8;
+    transform: translate(0, 0) scale(1);
+    transition: all 0.4s linear;
+  }
+  &:active {
+    box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
+    color: a.$color-grey-light-50;
+    transform: translate(1px, 2px) scale(0.98);
+    transition: all 0.05s linear;
   }
 }
 .arrow-up-icon {
   height: 2.5rem;
   margin-top: 0.25rem;
-  opacity: 0.5;
+  opacity: 1;
   transform: rotate(180deg);
   transition: all 0.4s ease-in-out;
 }
