@@ -73,7 +73,30 @@ body {
   padding: 6rem 0;
 }
 
-button {
+input,
+textarea {
+  padding: 1.5rem 1rem;
+  border-radius: 15px;
+  border: none;
+  background-color: inherit;
+  box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
+}
+
+input {
+  min-width: 27rem;
+  max-width: 30rem;
+  min-height: 3rem;
+}
+
+textarea {
+  min-width: 27rem;
+  max-width: 30rem;
+  min-height: 3rem;
+  max-height: 15rem;
+}
+
+button,
+.submit__button {
   background-color: inherit;
   box-shadow: 1px 1px 4px #1c2336, -2px -2px 3px #364568;
   border: none;
@@ -81,7 +104,8 @@ button {
   transform: translate(0px, 0px) scale(1);
   transition: all 0.05s linear;
 }
-button:active {
+button:active,
+.submit__button:active {
   box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
   color: rgba(206, 218, 234, 0.5);
   transform: translate(1px, 2px) scale(0.98);
@@ -111,6 +135,17 @@ button:active {
   opacity: 0.5;
   transform: rotate(180deg);
   transition: all 0.4s ease-in-out;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 p,
@@ -178,6 +213,15 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
+input,
+textarea {
+  font-family: "Karla";
+  font-weight: 800;
+  color: #cedaea;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 button {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   color: rgba(206, 218, 234, 0.75);
@@ -195,6 +239,22 @@ button {
 }
 .skill-grid__name {
   font-size: 1.5rem;
+}
+
+.form__error-message {
+  font-size: 1rem;
+  font-weight: 200;
+  background-color: transparent;
+  color: #ae6170;
+  text-transform: uppercase;
+  font-family: "Inconsolata";
+}
+
+.submit__button {
+  color: rgba(206, 218, 234, 0.75);
+  font-size: 2rem;
+  font-family: "Inconsolata";
+  letter-spacing: 2px;
 }
 
 @font-face {
@@ -370,9 +430,72 @@ button {
 .project {
   height: 60vh;
   width: 70vw;
-  border: solid;
-  border-color: grey;
+  box-shadow: -2px 2px 2px #1c2336, 2px -2px 2px #364568;
   margin: 2rem 0;
+  transition: all 0.1s ease-in-out;
+}
+.project:nth-child(even) {
+  border-radius: 0px 15px 15px 0;
+}
+.project:nth-child(odd) {
+  border-radius: 15px 0 0 15px;
+}
+.project:hover {
+  transform: scale(1.02);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__form {
+  width: 70vw;
+  height: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.contact__form .form__element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0 1rem 0;
+  position: relative;
+}
+.contact__form label {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+  padding: 0rem 0.25rem 0.25rem 0.25rem;
+}
+.contact__form .form__error-message {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 1.2rem;
+  width: 80%;
+  padding: 0.25rem 0.25rem 0rem 0.25rem;
+  pointer-events: none;
+  user-select: none;
+}
+.contact__form .submit__button {
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+@keyframes spacing {
+  0% {
+    letter-spacing: 0.125rem;
+    font-size: 1.2rem;
+  }
+  50% {
+    letter-spacing: 0.175rem;
+    font-size: 1.25rem;
+  }
+  100% {
+    letter-spacing: 0.125rem;
+    font-size: 1.2rem;
+  }
 }
 
 .footer {

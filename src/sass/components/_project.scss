@@ -2,7 +2,17 @@
 .project {
   height: 60vh;
   width: 70vw;
-  border: solid;
-  border-color: grey;
+
+  box-shadow: -2px 2px 2px #1c2336, 2px -2px 2px #364568;
   margin: 2rem 0;
+  transition: all 0.1s ease-in-out;
+  &:nth-child(even) {
+    border-radius: 0px 15px 15px 0;
+  }
+  &:nth-child(odd) {
+    border-radius: 15px 0 0 15px;
+  }
+  &:hover {
+    transform: scale(1.02);
+  }
 }

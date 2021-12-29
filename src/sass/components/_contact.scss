@@ -1,1 +1,67 @@
 @use "../abstracts/" as a;
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__form {
+    width: 70vw;
+    height: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+
+    // .form__element:nth-child(3n) .form__error-message {
+    //   animation: spacing 2s ease-in-out infinite;
+    // }
+    // .form__element:nth-child(4n) {
+    //   animation: spacing 2.5s ease-in-out infinite;
+    // }
+    // .form__element:nth-child(5n) {
+    //   animation: spacing 3s ease-in-out infinite;
+    // }
+
+    .form__element {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem 0 1rem 0;
+      position: relative;
+    }
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      letter-spacing: 0.25rem;
+      padding: 0rem 0.25rem 0.25rem 0.25rem;
+    }
+    .form__error-message {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 1.2rem;
+      width: 80%;
+      padding: 0.25rem 0.25rem 0rem 0.25rem;
+      pointer-events: none;
+      user-select: none;
+    }
+    .submit__button {
+      margin: 0 auto;
+      margin-top: 1rem;
+    }
+    @keyframes spacing {
+      0% {
+        letter-spacing: 0.125rem;
+        font-size: 1.2rem;
+      }
+
+      50% {
+        letter-spacing: 0.175rem;
+        font-size: 1.25rem;
+      }
+
+      100% {
+        letter-spacing: 0.125rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

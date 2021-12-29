@@ -69,6 +69,14 @@ button {
     transition: all 0.2s ease-in-out;
   }
 }
+input,
+textarea {
+  font-family: "Karla";
+  font-weight: 800;
+  color: a.$color-grey-light;
+  text-align: center;
+  text-transform: uppercase;
+}
 button {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   color: a.$color-grey-light-75;
@@ -87,4 +95,18 @@ button {
   &__name {
     font-size: 1.5rem;
   }
+}
+.form__error-message {
+  font-size: 1rem;
+  font-weight: 200;
+  background-color: transparent;
+  color: a.$color-error;
+  text-transform: uppercase;
+  font-family: "Inconsolata";
+}
+.submit__button {
+  color: a.$color-grey-light-75;
+  font-size: 2rem;
+  font-family: "Inconsolata";
+  letter-spacing: 2px;
 }

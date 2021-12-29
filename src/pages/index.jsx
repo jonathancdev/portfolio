@@ -27,7 +27,7 @@ const IndexPage = () => {
   useEffect(() => {
     setActiveLink(currentSection);
   }, [currentSection]);
-  console.log(activeLink);
+
   return (
     <div className="background-container">
       <Header

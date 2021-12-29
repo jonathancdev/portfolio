@@ -53,7 +53,29 @@ body {
     padding: a.$height-header 0;
   }
 }
-button {
+input,
+textarea {
+  padding: 1.5rem 1rem;
+  border-radius: 15px;
+  border: none;
+  background-color: inherit;
+  box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
+}
+input {
+  min-width: 27rem;
+  max-width: 30rem;
+  min-height: 3rem;
+}
+
+textarea {
+  min-width: 27rem;
+  max-width: 30rem;
+  min-height: 3rem;
+  max-height: 15rem;
+}
+
+button,
+.submit__button {
   background-color: inherit;
 
   box-shadow: 1px 1px 4px #1c2336, -2px -2px 3px #364568;
@@ -91,25 +113,13 @@ button {
   transform: rotate(180deg);
   transition: all 0.4s ease-in-out;
 }
-//   &__button {
-//     height: 6rem;
-//     width: 6rem;
-//     border-radius: 100%;
-//     margin-top: 3rem;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     &:active {
-//       .arrow-down-icon {
-//         opacity: 0.25;
-//         transition: all 0.1s ease-in-out;
-//       }
-//     }
-//   }
-//   .arrow-down-icon {
-//     height: 2.5rem;
-//     margin-top: 0.25rem;
-//     opacity: 0.5;
-//     transition: all 0.1s ease-in-out;
-//   }
-// }
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
