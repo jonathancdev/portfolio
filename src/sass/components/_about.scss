@@ -5,6 +5,11 @@
   flex-direction: column;
   align-items: center;
   padding: 5rem;
+  @include a.respond(mobile) {
+    //remove padding on mobile to fit text
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   //start section after header
   padding-top: a.$height-header;
 
@@ -13,6 +18,11 @@
     border-radius: 15px;
     height: 15rem;
     width: 15rem;
+    @include a.respond(mobile) {
+      //smaller icon on mobile
+      height: 10rem;
+      width: 10rem;
+    }
     display: flex;
     justify-content: center;
     align-items: center;

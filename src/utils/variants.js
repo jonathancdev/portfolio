@@ -30,7 +30,7 @@ export const jonathanVariants = {
   },
   appear: {
     opacity: 1,
-    transition: { duration: 1.25, ease: "easeIn" },
+    transition: { duration: 1.5, ease: "easeIn" },
   },
 };
 export const webVariants = {

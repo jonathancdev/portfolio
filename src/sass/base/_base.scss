@@ -62,14 +62,16 @@ textarea {
   box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
 }
 input {
+  width: 50vw;
   min-width: 27rem;
-  max-width: 30rem;
-  min-height: 3rem;
+  max-width: 35rem;
+  min-height: 5rem;
 }
 
 textarea {
+  width: 50vw;
   min-width: 27rem;
-  max-width: 30rem;
+  max-width: 35rem;
   min-height: 3rem;
   max-height: 15rem;
   padding-top: 4rem;
@@ -96,6 +98,14 @@ button,
   position: fixed;
   height: 6rem;
   width: 6rem;
+  @include a.respond(mobile) {
+    //makes button smaller on mobile
+    height: 4rem;
+    width: 4rem;
+    //align button with footer icons and move left
+    top: 88.8vh;
+    left: 80vw;
+  }
   border-radius: 100%;
   top: 88vh;
   left: 85.5vw;
@@ -116,6 +126,10 @@ button,
 }
 .arrow-up-icon {
   height: 2.5rem;
+  @include a.respond(mobile) {
+    //makes button icon smaller on mobile
+    height: 1.75rem;
+  }
   margin-top: 0.25rem;
   opacity: 1;
   transform: rotate(180deg);

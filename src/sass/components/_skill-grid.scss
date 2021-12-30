@@ -5,8 +5,16 @@
   align-content: center;
   justify-content: center;
   grid-template-columns: repeat(5, 10rem);
-  grid-gap: 1rem;
-
+  @include a.respond(def) {
+    grid-template-columns: repeat(5, 9rem);
+  }
+  grid-gap: 0.5rem;
+  @include a.respond(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 32rem;
+  }
   &__item {
     position: relative;
     display: flex;
@@ -15,6 +23,14 @@
     border: none;
     height: 9rem;
     width: 9rem;
+    @include a.respond(mobile) {
+      height: 7.25rem;
+      width: 7.25rem;
+    }
+    @include a.respond(def) {
+      height: 8rem;
+      width: 8rem;
+    }
     border-radius: 15px;
     box-shadow: 1px -1px 1px #1c2336, -1px 1px 1px #364568;
     margin: 0.5rem;
