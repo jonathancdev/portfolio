@@ -1,5 +1,6 @@
 @use "../abstracts/" as a;
 .project {
+  position: relative;
   height: 60vh;
   width: 80vw;
   @include a.respond(mobile) {
@@ -13,7 +14,7 @@
     width: 90vw;
   }
   background-color: inherit;
-  box-shadow: -2px 2px 2px #1c2336, 2px -2px 2px #364568;
+  border: solid;
   margin: 2rem 0;
   transition: all 0.1s ease-in-out;
   &:nth-child(even) {
@@ -32,5 +33,39 @@
   }
   &:hover {
     transform: scale(1.02);
+  }
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 70vw;
+    border-radius: 15px;
+
+    box-shadow: -2px 2px 2px #1c2336, 2px -2px 2px #364568;
+
+    margin: 0 auto;
+    &__navigation {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__image {
+      opacity: 0;
+      position: absolute;
+      height: auto;
+      width: 85%;
+      border-radius: 15px;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  &__description {
+    position: absolute;
+    bottom: 0;
   }
 }

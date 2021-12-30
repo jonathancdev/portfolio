@@ -39,7 +39,7 @@ const IndexPage = () => {
         <Introduction updateActiveLink={updateActiveLink} />
         <About />
         <ProjectSection>
-          <Project />
+          <Project name="cvbreeze" />
           <Project />
           <Project />
           <Project />
