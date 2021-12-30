@@ -60,7 +60,7 @@ button {
 }
 .navlink {
   color: a.$color-grey-light;
-  font-size: clamp(1.3rem, 2.25vw, 2.5rem);
+  font-size: clamp(1.3rem, 2.25vw, 2.25rem);
   text-transform: uppercase;
   font-weight: 200;
   cursor: pointer;
@@ -134,4 +134,21 @@ button {
   font-size: 2rem;
   font-family: "Inconsolata";
   letter-spacing: 2px;
+}
+.project {
+  &__heading--primary {
+    width: 100%;
+    text-align: center;
+    color: a.$color-grey-light-75;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
+    margin-top: 0.25rem;
+  }
+  &__text {
+    font-family: "Karla";
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    font-weight: 800;
+    color: a.$color-grey-light-75;
+    letter-spacing: 1px;
+  }
 }

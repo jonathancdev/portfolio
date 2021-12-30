@@ -1,20 +1,18 @@
 @use "../abstracts/" as a;
 .project {
   position: relative;
-  height: 60vh;
+  aspect-ratio: 4 / 4;
+  height: auto;
   width: 80vw;
+  max-width: 75rem;
   @include a.respond(mobile) {
     //projects should span most of width on mobile
-    max-height: 30rem;
+
     width: 95%;
   }
-  @include a.respond(def) {
-    //limit height and expand width on <800px
-    max-height: 35rem;
-    width: 90vw;
-  }
   background-color: inherit;
-  border: solid;
+  border-radius: 15px;
+  box-shadow: -2px 2px 2px #1c2336, 2px -2px 2px #364568;
   margin: 2rem 0;
   transition: all 0.1s ease-in-out;
   &:nth-child(even) {
@@ -36,36 +34,65 @@
   }
   .carousel {
     position: absolute;
-    width: 100%;
-    height: 70vw;
-    border-radius: 15px;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 4/3;
+    width: 90%;
+    height: auto;
 
-    box-shadow: -2px 2px 2px #1c2336, 2px -2px 2px #364568;
-
-    margin: 0 auto;
     &__navigation {
       position: absolute;
-      bottom: 0;
-      width: 100%;
+
+      width: 102%;
+
       display: flex;
       justify-content: space-between;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     &__image {
       opacity: 0;
       position: absolute;
       height: auto;
-      width: 85%;
-      border-radius: 15px;
-      top: 45%;
+      width: 98%;
+      border-radius: 5px;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+
       &.active {
-        opacity: 1;
+        opacity: 0.8;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__button {
+      background-color: a.$color-blue-dark;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100%;
+      border: none;
+      box-shadow: -1px 1px 1px #1c2336, 1px -1px 1px #364568;
+      &.left {
+        transform: rotate(90deg);
+      }
+      &.right {
+        transform: rotate(270deg);
+      }
+      img {
+        height: 1.25rem;
+        width: 1.25rem;
+        opacity: 0.5;
       }
     }
   }
-  &__description {
+  &__text {
+    height: 16%;
+    max-height: 8rem;
     position: absolute;
-    bottom: 0;
+    bottom: -2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 87%;
   }
 }

@@ -228,7 +228,7 @@ button {
 
 .navlink {
   color: #cedaea;
-  font-size: clamp(1.3rem, 2.25vw, 2.5rem);
+  font-size: clamp(1.3rem, 2.25vw, 2.25rem);
   text-transform: uppercase;
   font-weight: 200;
   cursor: pointer;
@@ -309,6 +309,22 @@ button {
   font-size: 2rem;
   font-family: "Inconsolata";
   letter-spacing: 2px;
+}
+
+.project__heading--primary {
+  width: 100%;
+  text-align: center;
+  color: rgba(206, 218, 234, 0.75);
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+  margin-top: 0.25rem;
+}
+.project__text {
+  font-family: "Karla";
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-weight: 800;
+  color: rgba(206, 218, 234, 0.75);
+  letter-spacing: 1px;
 }
 
 @font-face {
@@ -546,23 +562,19 @@ button {
 
 .project {
   position: relative;
-  height: 60vh;
+  aspect-ratio: 4/4;
+  height: auto;
   width: 80vw;
+  max-width: 75rem;
   background-color: inherit;
-  border: solid;
+  border-radius: 15px;
+  box-shadow: -2px 2px 2px #1c2336, 2px -2px 2px #364568;
   margin: 2rem 0;
   transition: all 0.1s ease-in-out;
 }
 @media (max-width: 500px) {
   .project {
-    max-height: 30rem;
     width: 95%;
-  }
-}
-@media (max-width: 800px) {
-  .project {
-    max-height: 35rem;
-    width: 90vw;
   }
 }
 .project:nth-child(even) {
@@ -586,35 +598,62 @@ button {
 }
 .project .carousel {
   position: absolute;
-  width: 100%;
-  height: 70vw;
-  border-radius: 15px;
-  box-shadow: -2px 2px 2px #1c2336, 2px -2px 2px #364568;
-  margin: 0 auto;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 4/3;
+  width: 90%;
+  height: auto;
 }
 .project .carousel__navigation {
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  width: 102%;
   display: flex;
   justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .project .carousel__image {
   opacity: 0;
   position: absolute;
   height: auto;
-  width: 85%;
-  border-radius: 15px;
-  top: 45%;
+  width: 98%;
+  border-radius: 5px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 .project .carousel__image.active {
-  opacity: 1;
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
 }
-.project__description {
+.project .carousel__button {
+  background-color: #29344f;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  border: none;
+  box-shadow: -1px 1px 1px #1c2336, 1px -1px 1px #364568;
+}
+.project .carousel__button.left {
+  transform: rotate(90deg);
+}
+.project .carousel__button.right {
+  transform: rotate(270deg);
+}
+.project .carousel__button img {
+  height: 1.25rem;
+  width: 1.25rem;
+  opacity: 0.5;
+}
+.project__text {
+  height: 16%;
+  max-height: 8rem;
   position: absolute;
-  bottom: 0;
+  bottom: -2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 87%;
 }
 
 .contact {

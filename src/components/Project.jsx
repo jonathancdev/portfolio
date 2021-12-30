@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import projectImages from "../utils/projectImages";
+import arrowIcon from "../images/arrowdown.png";
 
-export default function Project({ name }) {
+export default function Project({ name, description }) {
   const imageArray = projectImages[name];
   console.log(imageArray);
   const [counter, setCounter] = useState(1);
@@ -21,6 +22,7 @@ export default function Project({ name }) {
   };
   return (
     <div className="project">
+      <h1 className="project__heading--primary">{name}</h1>
       <div className="carousel">
         {imageArray &&
           imageArray.map((url, i) => {
@@ -31,17 +33,15 @@ export default function Project({ name }) {
             }
           })}
         <div className="carousel__navigation">
-          <button onClick={decrementCounter} className="carousel__button">
-            {"<"}
+          <button onClick={decrementCounter} className="carousel__button left">
+            <img src={arrowIcon} />
           </button>
-          <button onClick={incrementCounter} className="carousel__button">
-            {">"}
+          <button onClick={incrementCounter} className="carousel__button right">
+            <img src={arrowIcon} />
           </button>
         </div>
       </div>
-      <div className="project__description">
-        <h1 className="project__heading--primary">{name}</h1>
-      </div>
+      <h1 className="project__text">{description}</h1>
     </div>
   );
 }

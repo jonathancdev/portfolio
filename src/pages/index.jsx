@@ -39,7 +39,12 @@ const IndexPage = () => {
         <Introduction updateActiveLink={updateActiveLink} />
         <About />
         <ProjectSection>
-          <Project name="cvbreeze" />
+          <Project
+            name="cvbreeze"
+            description={
+              "CV / Resume builder web application. Users can sign-in and save changes to their personalized CV.  Built in React and styled with Sass."
+            }
+          />
           <Project />
           <Project />
           <Project />
