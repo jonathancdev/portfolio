@@ -137,12 +137,12 @@ button {
 }
 .project {
   &__heading--primary {
-    width: 100%;
-    text-align: center;
-    color: a.$color-grey-light-75;
+    display: inline;
+    padding: 0.25rem;
+    color: a.$color-blue-medium;
+    font-weight: 800;
     text-transform: uppercase;
     font-size: clamp(1.5rem, 3.5vw, 3rem);
-    margin-top: 0.25rem;
   }
   &__text {
     font-family: "Karla";

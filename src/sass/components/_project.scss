@@ -5,16 +5,20 @@
   height: auto;
   width: 80vw;
   max-width: 75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
   @include a.respond(mobile) {
     //projects should span most of width on mobile
-
+    padding: 0.5rem;
     width: 95%;
   }
   background-color: inherit;
   border-radius: 15px;
   box-shadow: -2px 2px 2px #1c2336, 2px -2px 2px #364568;
   margin: 2rem 0;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease;
   &:nth-child(even) {
     border-radius: 0px 15px 15px 0;
     @include a.respond(mobile) {
@@ -30,7 +34,7 @@
     }
   }
   &:hover {
-    transform: scale(1.02);
+    transform: scale(0.95);
   }
   .carousel {
     position: absolute;
@@ -40,11 +44,15 @@
     aspect-ratio: 4/3;
     width: 90%;
     height: auto;
-
+    &:hover {
+      .carousel__button {
+        opacity: 0.8;
+      }
+    }
     &__navigation {
       position: absolute;
 
-      width: 102%;
+      width: 95%;
 
       display: flex;
       justify-content: space-between;
@@ -53,6 +61,7 @@
       transform: translate(-50%, -50%);
     }
     &__image {
+      display: none;
       opacity: 0;
       position: absolute;
       height: auto;
@@ -62,17 +71,23 @@
       left: 50%;
 
       &.active {
+        display: block;
         opacity: 0.8;
         transform: translate(-50%, -50%);
       }
     }
     &__button {
+      opacity: 0;
       background-color: a.$color-blue-dark;
       width: 3rem;
       height: 3rem;
       border-radius: 100%;
       border: none;
       box-shadow: -1px 1px 1px #1c2336, 1px -1px 1px #364568;
+      transition: opacity 0.2s linear 0.1s;
+      @include a.respond(mobile) {
+        opacity: 1;
+      }
       &.left {
         transform: rotate(90deg);
       }
