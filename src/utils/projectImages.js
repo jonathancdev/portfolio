@@ -11,6 +11,18 @@ const projectImages = {
     "https://res.cloudinary.com/dklynundl/image/upload/v1640957203/portfolio/weathergetter3.png",
     "https://res.cloudinary.com/dklynundl/image/upload/v1640956817/portfolio/weathergetter4.png",
   ],
+  leyra: [
+    "https://res.cloudinary.com/dklynundl/image/upload/v1641062103/portfolio/leyra1.png",
+    "https://res.cloudinary.com/dklynundl/image/upload/v1641062107/portfolio/leyra2.png",
+    "https://res.cloudinary.com/dklynundl/image/upload/v1641062102/portfolio/leyra3.png",
+    "https://res.cloudinary.com/dklynundl/image/upload/v1641062099/portfolio/leyra4.png",
+  ],
+  filmsupply: [
+    "https://res.cloudinary.com/dklynundl/image/upload/v1641056169/portfolio/filmsupply1.png",
+    "https://res.cloudinary.com/dklynundl/image/upload/v1641056168/portfolio/filmsupply2.png",
+    "https://res.cloudinary.com/dklynundl/image/upload/v1641056169/portfolio/filmsupply3.png",
+    "https://res.cloudinary.com/dklynundl/image/upload/v1641056169/portfolio/filmsupply4.png",
+  ],
 };
 
 export default projectImages;

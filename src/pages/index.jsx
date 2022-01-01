@@ -50,12 +50,12 @@ const IndexPage = () => {
             description="WEATHERGETTER is a web application that allows users to input a city and country to retrieve the current weather conditions in that area. It features video backgrounds for all weather types. Built in React with OpenWeatherMap API."
           />
           <Project
-            name="artist"
+            name="leyra"
             title="customized sites"
             description="Highly customized websites for artists / creatives / independent brands. These sites utilize CMS systems to allow clients to control the content of their site. They feature custom image galleries, blogs, contact forms, and more. Built with Gatsby, Sass, GraphQL, and CMS."
           />
           <Project
-            name="commerce"
+            name="filmsupply"
             title="modern e-commerce solutions"
             description="High-speed and highly-optimized e-commerce sites built for small or scaling businesses. Clients can manage their products and inventory with simple admin tools. Built with next.js with the ability to connect to various payment solutions and CMS systems."
           />

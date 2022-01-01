@@ -5,10 +5,14 @@
   height: auto;
   width: 80vw;
   max-width: 75rem;
+  @include a.respond(desktop) {
+    max-width: 95rem;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+
+  padding: 3rem 1rem 1rem 1rem;
   @include a.respond(mobile) {
     //projects should span most of width on mobile
     padding: 0.5rem;
@@ -37,10 +41,11 @@
     transform: scale(0.95);
   }
   .carousel {
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 42%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    position: relative;
     aspect-ratio: 4/3;
     width: 90%;
     height: auto;
@@ -65,7 +70,7 @@
       opacity: 0;
       position: absolute;
       height: auto;
-      width: 98%;
+      width: 90%;
       border-radius: 5px;
       top: 50%;
       left: 50%;
@@ -102,12 +107,13 @@
     }
   }
   &__text {
-    height: 16%;
-    max-height: 8rem;
-    position: absolute;
-    bottom: -2%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 20%;
+    max-height: 15rem;
+
+    // position: absolute;
+    // bottom: 2%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     width: 87%;
   }
 }
