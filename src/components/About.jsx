@@ -11,10 +11,10 @@ export default function About() {
         <Icon name="abouticon" size="10rem" color="rgba(0, 0, 0, 0.25)" />
       </div>
       <p className="about__text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-        voluptatibus sint. Numquam sint eum dignissimos deserunt repudiandae
-        odio possimus, soluta quos at quod quam eius dolorem cupiditate
-        reprehenderit dicta quaerat!
+        Creativity, user experience, and the future of tech are at the forefront
+        of my approach to web design. I love to create and use my skills to help
+        others realize their dreams. I make websites and applications for
+        individuals, artists, small businesses, and entrepreneurs.
       </p>
 
       <SkillGrid />
