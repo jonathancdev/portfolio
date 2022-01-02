@@ -8,10 +8,11 @@
   //start below first section
   position: absolute;
   top: 100vh;
+  transition: background-color 1s ease-in-out;
   &.fixed {
     position: fixed;
     top: 0;
-    box-shadow: 0px 3px 5px 0px #242b3eca;
+    background-color: #252f47;
   }
 }
 

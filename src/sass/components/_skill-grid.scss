@@ -2,6 +2,7 @@
 
 .skill-grid {
   display: grid;
+  margin-top: 5rem;
   align-content: center;
   justify-content: center;
   grid-template-columns: repeat(5, 10rem);
@@ -14,6 +15,7 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 32rem;
+    margin-top: 1rem;
   }
   &__item {
     position: relative;

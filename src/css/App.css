@@ -385,11 +385,12 @@ button {
   z-index: 1;
   position: absolute;
   top: 100vh;
+  transition: background-color 1s ease-in-out;
 }
 .header.fixed {
   position: fixed;
   top: 0;
-  box-shadow: 0px 3px 5px 0px #242b3eca;
+  background-color: #252f47;
 }
 
 .navlinks {
@@ -487,6 +488,7 @@ button {
 
 .skill-grid {
   display: grid;
+  margin-top: 5rem;
   align-content: center;
   justify-content: center;
   grid-template-columns: repeat(5, 10rem);
@@ -503,6 +505,7 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 32rem;
+    margin-top: 1rem;
   }
 }
 .skill-grid__item {
@@ -574,6 +577,7 @@ button {
   border-radius: 10px;
   box-shadow: -1px 1px 1px #1c2336, 1px -1px 1px #364568;
   margin: 1rem 0;
+  transform: scale(0.96);
   transition: all 0.2s ease;
 }
 @media (min-width: 1200px) {
@@ -588,7 +592,7 @@ button {
   }
 }
 .project:hover {
-  transform: scale(0.95);
+  transform: scale(1);
 }
 .project .carousel {
   position: relative;

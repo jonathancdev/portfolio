@@ -1,10 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-// const encode = (data) => {
-//   return Object.keys(data)
-//     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-//     .join("&");
-// };
+import { navigate } from "gatsby";
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 export default function Contact() {
   const {
     register,
@@ -13,20 +14,20 @@ export default function Contact() {
   } = useForm();
   const onSubmit = (data, e) => {
     console.log("submit");
-    //  fetch("/", {
-    //    method: "POST",
-    //    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //    body: encode({
-    //      "form-name": "contact",
-    //      ...data,
-    //    }),
-    //  })
-    //    .then((response) => {
-    //      navigate("/thanks/");
-    //      console.log(response);
-    //    })
-    //    .catch((error) => console.log(error));
-    //  e.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contact",
+        ...data,
+      }),
+    })
+      .then((response) => {
+        navigate("/thanks/");
+        console.log(response);
+      })
+      .catch((error) => console.log(error));
+    e.preventDefault();
   };
   return (
     <section id="contact" className="contact main__section">

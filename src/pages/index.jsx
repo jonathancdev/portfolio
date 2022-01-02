@@ -46,7 +46,7 @@ const IndexPage = () => {
           />
           <Project
             name="weathergetter"
-            title="Current weather app"
+            title="weather app"
             description="WEATHERGETTER is a web application that allows users to input a city and country to retrieve the current weather conditions in that area. It features video backgrounds for all weather types. Built in React with OpenWeatherMap API."
           />
           <Project
