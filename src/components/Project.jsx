@@ -4,7 +4,7 @@ import arrowIcon from "../images/arrowdown.png";
 
 export default function Project({ name, title, description }) {
   const imageArray = projectImages[name];
-  console.log(imageArray);
+
   const [counter, setCounter] = useState(1);
   const incrementCounter = () => {
     if (counter < imageArray.length) {

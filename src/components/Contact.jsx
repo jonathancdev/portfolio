@@ -13,7 +13,6 @@ export default function Contact() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data, e) => {
-    console.log("submit");
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
