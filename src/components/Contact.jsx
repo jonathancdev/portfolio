@@ -31,21 +31,10 @@ export default function Contact() {
   return (
     <section id="contact" className="contact main__section">
       <h1 className="section__heading--primary">Contact</h1>
-      {/* NETLIFY FORM
       <form
         name="contact-form"
         method="POST"
         action="/"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit(onSubmit)}
-        className="contact__form"
-      > */}
-      {/* FORMSPREE FORM */}
-      <form
-        name="contact-form"
-        method="POST"
-        action="https://formspree.io/f/xeqnolqy"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit(onSubmit)}
