@@ -39,7 +39,6 @@ export default function Contact() {
         onSubmit={handleSubmit(onSubmit)}
         className="contact__form"
       >
-        <input type="hidden" name="form-name" value="contact-form" />
         <input
           type="text"
           className="visually-hidden"
