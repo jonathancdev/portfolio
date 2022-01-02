@@ -7,6 +7,7 @@ const encode = (data) => {
     .join("&");
 };
 export default function Contact() {
+  e.preventDefault();
   const {
     register,
     handleSubmit,
@@ -26,7 +27,6 @@ export default function Contact() {
         console.log(response);
       })
       .catch((error) => console.log(error));
-    e.preventDefault();
   };
   return (
     <section id="contact" className="contact main__section">
