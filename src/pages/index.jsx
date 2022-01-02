@@ -18,6 +18,7 @@ const IndexPage = () => {
     handleScroll,
     currentSection,
   } = useScrollPosition();
+
   const [activeLink, setActiveLink] = useState("home");
 
   const updateActiveLink = (section) => {
