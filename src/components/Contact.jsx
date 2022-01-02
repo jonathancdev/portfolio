@@ -100,9 +100,8 @@ export default function Contact() {
             <p className="form__error-message">{errors.message.message}</p>
           )}
         </div>
-        <div className="form__element">
-          <input type="submit" className="submit__button" value="SEND" />
-        </div>
+
+        <input type="submit" className="submit__button" value="SEND" />
       </form>
     </section>
   );
