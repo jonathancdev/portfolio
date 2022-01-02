@@ -23,7 +23,7 @@ export default function Contact() {
       }),
     })
       .then((response) => {
-        navigate("/thanks/");
+        navigate("/thanks");
         console.log(response);
       })
       .catch((error) => console.log(error));
@@ -34,6 +34,7 @@ export default function Contact() {
       <form
         name="contact-form"
         method="POST"
+        action="/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit(onSubmit)}
