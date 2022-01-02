@@ -7,13 +7,13 @@ const encode = (data) => {
     .join("&");
 };
 export default function Contact() {
-  e.preventDefault();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = (data, e) => {
+    e.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
