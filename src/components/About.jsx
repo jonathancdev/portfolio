@@ -8,7 +8,7 @@ export default function About() {
     <section id="about" className="about main__section">
       <h1 className="section__heading--primary">About</h1>
       <div className="about__img">
-        <Icon name="abouticon" size="10rem" color="rgba(0, 0, 0, 0.25)" />
+        <Icon name="abouticon" size="100px" color="rgba(0, 0, 0, 0.25)" />
       </div>
       <p className="about__text">
         Creativity, user experience, and the future of tech are at the forefront

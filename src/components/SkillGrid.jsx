@@ -20,7 +20,7 @@ export default function SkillGrid() {
         return (
           <div key={skill.skill} className="skill-grid__item">
             <div className="skill-grid__content">
-              <Icon name={skill.skill} color={skill.color} size="4rem" />
+              <Icon name={skill.skill} color={skill.color} size="40px" />
               <span className="skill-grid__name">{skill.name}</span>
             </div>
           </div>
