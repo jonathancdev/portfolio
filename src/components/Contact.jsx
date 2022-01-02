@@ -13,7 +13,6 @@ export default function Contact() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data, e) => {
-    e.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -23,10 +22,10 @@ export default function Contact() {
       }),
     })
       .then((response) => {
-        navigate("/thanks");
         console.log(response);
       })
       .catch((error) => console.log(error));
+    e.preventDefault();
   };
   return (
     <section id="contact" className="contact main__section">

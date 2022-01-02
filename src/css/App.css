@@ -601,16 +601,20 @@ button {
   height: auto;
 }
 .project .carousel:hover .carousel__button {
-  opacity: 0.5;
+  opacity: 0.8;
+}
+.project .carousel:hover .carousel__navigation {
+  width: 92%;
 }
 .project .carousel__navigation {
   position: absolute;
-  width: 95%;
+  width: 101%;
   display: flex;
   justify-content: space-between;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: width 0.1s linear;
 }
 .project .carousel__image {
   display: none;
@@ -628,14 +632,17 @@ button {
   transform: translate(-50%, -50%);
 }
 .project .carousel__button {
-  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
   background-color: rgba(206, 218, 234, 0.5);
   width: 3rem;
   height: 3rem;
   border-radius: 100%;
   border: none;
   box-shadow: none;
-  transition: opacity 0.2s linear 0.1s;
+  transition: opacity 0.1s linear;
 }
 @media (max-width: 500px) {
   .project .carousel__button {

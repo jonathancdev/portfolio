@@ -35,19 +35,23 @@
     height: auto;
     &:hover {
       .carousel__button {
-        opacity: 0.5;
+        opacity: 0.8;
+      }
+      .carousel__navigation {
+        width: 92%;
       }
     }
     &__navigation {
       position: absolute;
 
-      width: 95%;
+      width: 101%;
 
       display: flex;
       justify-content: space-between;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      transition: width 0.1s linear;
     }
     &__image {
       display: none;
@@ -66,7 +70,10 @@
       }
     }
     &__button {
-      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.5;
       background-color: a.$color-grey-light-50;
       width: 3rem;
       height: 3rem;
@@ -74,7 +81,7 @@
       border: none;
       box-shadow: none;
       // box-shadow: 0px 0px 0px #cedaea, 1px -1px 0px #cedaea;
-      transition: opacity 0.2s linear 0.1s;
+      transition: opacity 0.1s linear;
       @include a.respond(mobile) {
         opacity: 0.8;
       }
