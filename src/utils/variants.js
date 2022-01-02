@@ -30,7 +30,7 @@ export const jonathanVariants = {
   },
   appear: {
     opacity: 1,
-    transition: { duration: 1.5, ease: "easeIn" },
+    transition: { duration: 1, ease: "easeInOut" },
   },
 };
 export const webVariants = {
@@ -39,17 +39,16 @@ export const webVariants = {
   },
   appear: {
     opacity: 1,
-    transition: { duration: 0.6, ease: "easeIn", delay: 0.5 },
+    transition: { duration: 0.5, ease: "easeIn", delay: 0.2 },
   },
 };
 export const buttonVariants = {
   initial: {
-    opacity: 0,
-    scale: 0.5,
+    visibility: "hidden",
   },
   appear: {
-    scale: [1, 1.3, 1],
-    opacity: 1,
-    transition: { duration: 0.5, ease: "linear", delay: 0.2 },
+    scale: [0.5, 1.3, 1],
+    visibility: "visible",
+    transition: { duration: 0.4, ease: "easeIn", delay: 0.1 },
   },
 };
