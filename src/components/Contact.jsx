@@ -31,7 +31,7 @@ export default function Contact() {
     <section id="contact" className="contact main__section">
       <h1 className="section__heading--primary">Contact</h1>
       <form
-        name="my-form"
+        name="contact-form"
         method="POST"
         action="/"
         data-netlify="true"
@@ -39,7 +39,7 @@ export default function Contact() {
         onSubmit={handleSubmit(onSubmit)}
         className="contact__form"
       >
-        <input type="hidden" name="form-name" value="my-form" />
+        <input type="hidden" name="form-name" value="contact-form" />
         <input
           type="text"
           className="visually-hidden"
