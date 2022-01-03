@@ -13,7 +13,7 @@ export default function Contact() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data, e) => {
-    fetch("/", {
+    fetch("https://elastic-goldberg-56c4e2.netlify.app/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
