@@ -4,7 +4,7 @@ module.exports = {
     title: "Jonathan C Portfolio",
   },
   plugins: [
-    [`gatsby-plugin-netlify`],
+    "gatsby-plugin-netlify",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
 
