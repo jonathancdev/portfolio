@@ -15,15 +15,13 @@
     height: 100%;
     opacity: 0.75;
     padding: 1rem;
-    @include a.respond(mobile) {
-      //center icons in footer on mobile, gives space for copyright
-      align-items: center;
-    }
+    align-items: center;
   }
   .icon__link {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     cursor: pointer;
     &:first-child {
@@ -34,6 +32,10 @@
       margin-top: 0.5rem;
       color: a.$color-black-50;
     }
+  }
+  .showemail {
+    display: flex;
+    align-items: center;
   }
   &__text {
     position: absolute;

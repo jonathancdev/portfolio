@@ -6,7 +6,7 @@
   width: 90%;
   max-width: 80rem;
   @include a.respond(mobile) {
-    aspect-ratio: 4 / 3.75;
+    aspect-ratio: 4 / 4;
   }
   @include a.respond(def) {
     max-width: 95rem;

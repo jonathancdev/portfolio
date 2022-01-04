@@ -600,7 +600,7 @@ button {
 }
 @media (max-width: 500px) {
   .project {
-    aspect-ratio: 4/3.75;
+    aspect-ratio: 4/4;
   }
 }
 @media (max-width: 800px) {
@@ -694,7 +694,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: calc(100vh - 12rem);
+  min-height: calc(100vh - 10rem);
 }
 .contact__form {
   width: auto;
@@ -751,7 +751,7 @@ button {
 
 .footer {
   position: relative;
-  height: 12rem;
+  height: 10rem;
   width: 100%;
   background-color: inherit;
   z-index: 0;
@@ -764,16 +764,13 @@ button {
   height: 100%;
   opacity: 0.75;
   padding: 1rem;
-}
-@media (max-width: 500px) {
-  .footer .icons {
-    align-items: center;
-  }
+  align-items: center;
 }
 .footer .icon__link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -784,6 +781,10 @@ button {
   text-transform: uppercase;
   margin-top: 0.5rem;
   color: rgba(0, 0, 0, 0.5);
+}
+.footer .showemail {
+  display: flex;
+  align-items: center;
 }
 .footer__text {
   position: absolute;
