@@ -29,7 +29,7 @@ export default function Contact() {
     e.preventDefault();
   };
   return (
-    <section id="contact" className="contact main__section">
+    <section id="contactsection" className="contact main__section">
       <h1 className="section__heading--primary">Contact</h1>
       <form
         name="contact-form"

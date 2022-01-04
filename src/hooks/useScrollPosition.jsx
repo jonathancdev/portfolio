@@ -11,7 +11,7 @@ export default function useScrollPosition() {
     const home = document.getElementById("home");
     const about = document.getElementById("about");
     const projectsection = document.getElementById("projectsection");
-    const contact = document.getElementById("contact");
+    const contact = document.getElementById("contactsection");
     if (y >= contact.offsetTop - 250) {
       setCurrentSection("contact");
     } else if (y >= projectsection.offsetTop - 250) {
