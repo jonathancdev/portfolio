@@ -10,7 +10,7 @@ import Project from "../components/Project";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import useScrollPosition from "../hooks/useScrollPosition";
-import arrowIcon from "../images/arrowdown.png";
+import Icon from "../components/Icon";
 const IndexPage = () => {
   const {
     headerShouldBeFixed,
@@ -40,26 +40,10 @@ const IndexPage = () => {
         <Introduction updateActiveLink={updateActiveLink} />
         <About />
         <ProjectSection>
-          <Project
-            name="cvbreeze"
-            title="CV / Resume Builder"
-            description="CVBREEZE is a CV / Resume builder web application. Users can sign-in and save changes to their personalized CV. Users can see changes in real time and generate a printer compatible A4 document.  Built in React and styled with Sass."
-          />
-          <Project
-            name="weathergetter"
-            title="weather app"
-            description="WEATHERGETTER is a web application that allows users to input a city and country to retrieve the current weather conditions in that area. It features video backgrounds for all weather types. Built in React with OpenWeatherMap API."
-          />
-          <Project
-            name="leyra"
-            title="customized sites"
-            description="Highly customized websites for artists / creatives / independent brands. These sites utilize CMS systems to allow clients to control the content of their site. They feature custom image galleries, blogs, contact forms, and more. Built with Gatsby, Sass, GraphQL, and CMS."
-          />
-          <Project
-            name="filmsupply"
-            title="modern e-commerce solutions"
-            description="High-speed and highly-optimized e-commerce sites built for small or scaling businesses. Clients can manage their products and inventory with simple admin tools. Built with next.js with the ability to connect to various payment solutions and CMS systems."
-          />
+          <Project name="leyra" />
+          <Project name="filmsupply" />
+          <Project name="cvbreeze" />
+          <Project name="weathergetter" />
         </ProjectSection>
         <Contact />
         <Footer />
@@ -71,7 +55,7 @@ const IndexPage = () => {
           }
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <img src={arrowIcon} alt="arrow" className="arrow-up-icon" />
+          <Icon name="arrow" />
         </button>
       </section>
 

@@ -44,11 +44,18 @@ export const webVariants = {
 };
 export const buttonVariants = {
   initial: {
-    visibility: "hidden",
+    opacity: 0,
+    scale: 1,
   },
   appear: {
-    scale: [0.5, 1.3, 1],
-    visibility: "visible",
-    transition: { duration: 0.4, ease: "easeIn", delay: 0.1 },
+    scale: [1, 0.3, 0.7, 1.3, 1],
+    opacity: 1,
+    transition: { duration: 0.6, ease: "easeIn", delay: 0 },
+  },
+  tap: {
+    scale: 0.95,
+    x: 1,
+    y: 1,
+    transition: { duration: 0.1, ease: "easeInOut" },
   },
 };

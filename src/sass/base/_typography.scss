@@ -4,9 +4,8 @@ p,
 h1,
 h2,
 h3,
-div,
-span {
-  color: a.$color-grey-light;
+div {
+  color: a.$color-blue-medium;
 }
 h1,
 h2,
@@ -20,14 +19,15 @@ p,
 div,
 button {
   font-family: "Karla";
-  color: a.$color-grey-light;
+  color: a.$color-black-50;
 }
 .section {
   &__heading {
     &--primary {
+      color: a.$color-black-50;
       width: 100%;
       text-align: center;
-      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-size: clamp(2.5rem, 6.5vw, 4rem);
       padding: 2rem;
       margin-bottom: 1rem;
       @include a.respond(mobile) {
@@ -37,7 +37,7 @@ button {
       }
       text-transform: uppercase;
       font-weight: 800;
-      border-radius: 15px;
+      border-radius: 5px;
     }
   }
 }
@@ -45,10 +45,11 @@ button {
   &__heading {
     &--primary {
       font-size: clamp(2rem, 6vw, 4rem);
+      color: a.$color-blue-dark-50;
     }
   }
   span {
-    color: #5b78b0;
+    color: a.$color-blue-medium;
   }
 }
 .about {
@@ -59,12 +60,12 @@ button {
   }
 }
 .navlink {
-  color: a.$color-grey-light;
+  color: a.$color-blue-dark-50;
   font-size: clamp(1.3rem, 2.25vw, 2.25rem);
   text-transform: uppercase;
   font-weight: 200;
   cursor: pointer;
-  font-family: "Inconsolata";
+  font-family: "Karla";
   transition: all 0.1s ease-in-out;
   &:not(:last-child) {
     margin-right: 10%;
@@ -74,8 +75,8 @@ button {
     }
   }
   &.active {
-    color: a.$color-blue-light;
-    font-weight: 300;
+    color: a.$color-blue-medium;
+    font-weight: 400;
 
     transform: scale(1.1);
     transition: all 0.2s ease-in-out;
@@ -83,13 +84,14 @@ button {
 }
 input,
 textarea {
+  font-size: clamp(1.3rem, 2.5vw, 2.25rem);
   font-family: "Karla";
-  font-weight: 800;
-  color: a.$color-grey-light;
-  text-align: center;
+  font-weight: 400;
+  color: a.$color-black-50;
   text-transform: uppercase;
   &::placeholder {
-    color: a.$color-grey-light-75;
+    color: a.$color-black-75;
+    font-size: 1.6rem;
   }
 }
 button {
@@ -108,47 +110,52 @@ button {
     padding: 1rem 0;
   }
   &__name {
-    font-size: 1.25rem;
-    @include a.respond(mobile) {
-      //fit text on mobile
-      font-size: 0.85rem;
+    font-size: 1.5rem;
+    @include a.respond(def) {
+      font-size: 1.25rem;
       margin-top: 0.25rem;
     }
-    @include a.respond(def) {
-      font-size: 0.9rem;
+    @include a.respond(mobile) {
+      //fit text on mobile
+      font-size: 1.2rem;
       margin-top: 0.25rem;
     }
   }
 }
 .form__error-message {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 1px;
   background-color: transparent;
   color: a.$color-error;
   text-transform: uppercase;
-  font-family: "Inconsolata";
+  font-family: "Karla";
 }
 .submit__button {
-  color: a.$color-grey-light-75;
+  //match color of input backgrounds
+  color: rgb(239, 239, 239);
   font-size: 2rem;
   font-family: "Inconsolata";
-  letter-spacing: 2px;
+  letter-spacing: 5px;
+  text-align: start;
+  font-weight: 800;
 }
 .project {
   &__heading--primary {
     display: inline;
-    padding: 0.25rem;
-    color: a.$color-blue-medium;
-    font-weight: 800;
+    padding: 1rem;
+    color: a.$color-blue-dark-75;
+    font-weight: 400;
     text-transform: uppercase;
     font-size: clamp(1.5rem, 3.5vw, 3rem);
+    letter-spacing: 3px;
   }
   &__text {
+    color: a.$color-black-50;
+    width: 90%;
     font-family: "Karla";
-    font-size: clamp(1rem, 2vw, 2.5rem);
-    font-weight: 800;
-    color: a.$color-grey-light-75;
-    letter-spacing: 1px;
+    font-size: clamp(1.2rem, 2vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: 0.5px;
   }
 }

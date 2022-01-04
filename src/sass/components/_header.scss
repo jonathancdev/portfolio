@@ -2,17 +2,20 @@
 .header {
   height: a.$height-header;
   width: 100vw;
-  background-color: a.$color-blue-dark;
+  background-color: a.$color-grey-light;
   box-shadow: none;
   z-index: 1;
   //start below first section
   position: absolute;
   top: 100vh;
-  transition: background-color 1s ease-in-out;
+  transition: box-shadow 0.75s ease-in-out;
+  box-shadow: none;
   &.fixed {
+    opacity: 1;
     position: fixed;
     top: 0;
-    background-color: #252f47;
+    box-shadow: 1px 1px 3px #cfcfcfa4;
+    background-color: a.$color-grey-light;
   }
 }
 

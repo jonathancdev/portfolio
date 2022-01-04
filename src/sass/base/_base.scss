@@ -30,21 +30,14 @@ body {
 .background-container {
   position: relative;
   height: auto;
-  // animation: BackgroundColor 18s ease-in-out infinite;
   overflow-x: hidden;
   position: relative;
 }
 .main {
   height: 100%;
   width: 100%;
-  // background: linear-gradient(
-  //   270deg,
-  //   rgb(91, 120, 176, 0.5),
-  //   rgba(41, 52, 79, 0.5),
-  //   rgba(0, 0, 0, 0.5)
-  // );
-  // background-size: 400% 400%;
-  background-color: #29344f;
+
+  background-color: a.$color-grey-light;
   animation: BackgroundGradient 18s ease;
 
   &__section {
@@ -56,85 +49,126 @@ body {
 input,
 textarea {
   padding: 1.5rem 1rem;
-  border-radius: 15px;
+  border-radius: 0px;
   border: none;
+  border-radius: 3px;
   background-color: inherit;
-  box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
+  background-color: a.$color-white-50;
+  // box-shadow: inset -2px 2px 4px #cecece, inset 2px -2px 4px #f2f2f2;
 }
+
 input {
-  width: 50vw;
-  min-width: 27rem;
+  width: 35rem;
   max-width: 35rem;
   min-height: 5rem;
+  @include a.respond(mobile) {
+    width: 28rem;
+    max-width: 28rem;
+  }
+  @include a.respond(desktop) {
+    width: 40rem;
+    max-width: 40rem;
+  }
 }
 
 textarea {
-  width: 50vw;
-  min-width: 27rem;
+  width: 35rem;
   max-width: 35rem;
+  @include a.respond(mobile) {
+    width: 28rem;
+    max-width: 28rem;
+  }
+  @include a.respond(desktop) {
+    width: 40rem;
+    max-width: 40rem;
+  }
   min-height: 3rem;
   max-height: 15rem;
   padding-top: 4rem;
   padding-bottom: 2rem;
 }
 
-button,
-.submit__button {
-  background-color: inherit;
-
-  box-shadow: 1px 1px 4px #1c2336, -2px -2px 3px #364568;
-  border: none;
+button {
   cursor: pointer;
-  transform: translate(0px, 0px) scale(1);
-  transition: all 0.05s linear;
+  border: none;
+}
+.submit__button {
+  min-width: 5rem;
+  width: 8rem;
   &:active {
-    box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
-    color: a.$color-grey-light-50;
-    transform: translate(1px, 2px) scale(0.98);
-    transition: all 0.05s linear;
   }
 }
+.introduction__button,
 .scroll-to-top__button {
-  position: fixed;
   height: 6rem;
   width: 6rem;
   @include a.respond(mobile) {
     //makes button smaller on mobile
     height: 4rem;
     width: 4rem;
+  }
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    height: 2.5rem;
+    @include a.respond(mobile) {
+      height: 2rem;
+    }
+    path {
+      fill: a.$color-blue-medium;
+    }
+  }
+  &:active {
+    svg {
+      path {
+        fill: a.$color-blue-dark-50;
+      }
+    }
+  }
+}
+
+.scroll-to-top__button {
+  svg {
+    transform: rotate(180deg);
+    margin-top: 0.75rem;
+  }
+  position: fixed;
+  //different box-shadow because it floats over other elements
+
+  @include a.respond(mobile) {
     //align button with footer icons and move left
     top: 88.8vh;
     left: 80vw;
   }
-  border-radius: 100%;
   top: 88vh;
   left: 85.5vw;
   opacity: 1;
   transform: translate(0, 30rem) scale(1);
   transition: transform 0.5s ease-in-out;
   &.visible {
-    opacity: 0.8;
     transform: translate(0, 0) scale(1);
     transition: all 0.4s linear;
   }
   &:active {
-    box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
-    color: a.$color-grey-light-50;
-    transform: translate(1px, 2px) scale(0.98);
+    transform: translate(1px, 1px) scale(0.95);
     transition: all 0.05s linear;
   }
 }
-.arrow-up-icon {
-  height: 2.5rem;
-  @include a.respond(mobile) {
-    //makes button icon smaller on mobile
-    height: 1.75rem;
-  }
-  margin-top: 0.25rem;
-  opacity: 1;
-  transform: rotate(180deg);
-  transition: all 0.4s ease-in-out;
-}
+// .arrow-up-icon {
+//   height: 2.5rem;
+//   @include a.respond(mobile) {
+//     //makes button icon smaller on mobile
+//     height: 1.75rem;
+//   }
+//   margin-top: 0.25rem;
+//   opacity: 1;
+//   transform: rotate(180deg);
+//   transition: all 0.4s ease-in-out;
+//   filter: invert(40%);
+// }
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);

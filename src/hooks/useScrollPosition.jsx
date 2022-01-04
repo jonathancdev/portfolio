@@ -23,7 +23,7 @@ export default function useScrollPosition() {
     }
   };
   const setHeaderPosition = () => {
-    if (window.scrollY >= window.innerHeight) {
+    if (window.scrollY >= window.innerHeight - 1) {
       setHeaderShouldBeFixed(true);
     } else if (window.scrollY <= window.innerHeight) {
       setHeaderShouldBeFixed(false);

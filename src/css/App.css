@@ -64,7 +64,7 @@ body {
 .main {
   height: 100%;
   width: 100%;
-  background-color: #29344f;
+  background-color: #e0e0e0;
   animation: BackgroundGradient 18s ease;
 }
 .main__section {
@@ -76,88 +76,121 @@ body {
 input,
 textarea {
   padding: 1.5rem 1rem;
-  border-radius: 15px;
+  border-radius: 0px;
   border: none;
+  border-radius: 3px;
   background-color: inherit;
-  box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 input {
-  width: 50vw;
-  min-width: 27rem;
+  width: 35rem;
   max-width: 35rem;
   min-height: 5rem;
 }
+@media (max-width: 500px) {
+  input {
+    width: 28rem;
+    max-width: 28rem;
+  }
+}
+@media (min-width: 1200px) {
+  input {
+    width: 40rem;
+    max-width: 40rem;
+  }
+}
 
 textarea {
-  width: 50vw;
-  min-width: 27rem;
+  width: 35rem;
   max-width: 35rem;
   min-height: 3rem;
   max-height: 15rem;
   padding-top: 4rem;
   padding-bottom: 2rem;
 }
-
-button,
-.submit__button {
-  background-color: inherit;
-  box-shadow: 1px 1px 4px #1c2336, -2px -2px 3px #364568;
-  border: none;
-  cursor: pointer;
-  transform: translate(0px, 0px) scale(1);
-  transition: all 0.05s linear;
+@media (max-width: 500px) {
+  textarea {
+    width: 28rem;
+    max-width: 28rem;
+  }
 }
-button:active,
-.submit__button:active {
-  box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
-  color: rgba(206, 218, 234, 0.5);
-  transform: translate(1px, 2px) scale(0.98);
-  transition: all 0.05s linear;
+@media (min-width: 1200px) {
+  textarea {
+    width: 40rem;
+    max-width: 40rem;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.submit__button {
+  min-width: 5rem;
+  width: 8rem;
+}
+.introduction__button,
+.scroll-to-top__button {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .introduction__button,
+.scroll-to-top__button {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+.introduction__button svg,
+.scroll-to-top__button svg {
+  height: 2.5rem;
+}
+@media (max-width: 500px) {
+  .introduction__button svg,
+.scroll-to-top__button svg {
+    height: 2rem;
+  }
+}
+.introduction__button svg path,
+.scroll-to-top__button svg path {
+  fill: #5b78b0;
+}
+.introduction__button:active svg path,
+.scroll-to-top__button:active svg path {
+  fill: rgba(41, 52, 79, 0.5);
 }
 
 .scroll-to-top__button {
   position: fixed;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 100%;
   top: 88vh;
   left: 85.5vw;
   opacity: 1;
   transform: translate(0, 30rem) scale(1);
   transition: transform 0.5s ease-in-out;
 }
+.scroll-to-top__button svg {
+  transform: rotate(180deg);
+  margin-top: 0.75rem;
+}
 @media (max-width: 500px) {
   .scroll-to-top__button {
-    height: 4rem;
-    width: 4rem;
     top: 88.8vh;
     left: 80vw;
   }
 }
 .scroll-to-top__button.visible {
-  opacity: 0.8;
   transform: translate(0, 0) scale(1);
   transition: all 0.4s linear;
 }
 .scroll-to-top__button:active {
-  box-shadow: inset 1px 1px 4px #1c2336, inset -2px -2px 3px #364568;
-  color: rgba(206, 218, 234, 0.5);
-  transform: translate(1px, 2px) scale(0.98);
+  transform: translate(1px, 1px) scale(0.95);
   transition: all 0.05s linear;
-}
-
-.arrow-up-icon {
-  height: 2.5rem;
-  margin-top: 0.25rem;
-  opacity: 1;
-  transform: rotate(180deg);
-  transition: all 0.4s ease-in-out;
-}
-@media (max-width: 500px) {
-  .arrow-up-icon {
-    height: 1.75rem;
-  }
 }
 
 .visually-hidden {
@@ -175,9 +208,8 @@ p,
 h1,
 h2,
 h3,
-div,
-span {
-  color: #cedaea;
+div {
+  color: #5b78b0;
 }
 
 h1,
@@ -193,18 +225,19 @@ p,
 div,
 button {
   font-family: "Karla";
-  color: #cedaea;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .section__heading--primary {
+  color: rgba(0, 0, 0, 0.5);
   width: 100%;
   text-align: center;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.5rem, 6.5vw, 4rem);
   padding: 2rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
   font-weight: 800;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 @media (max-width: 500px) {
   .section__heading--primary {
@@ -215,6 +248,7 @@ button {
 
 .introduction__heading--primary {
   font-size: clamp(2rem, 6vw, 4rem);
+  color: rgba(41, 52, 79, 0.5);
 }
 .introduction span {
   color: #5b78b0;
@@ -227,12 +261,12 @@ button {
 }
 
 .navlink {
-  color: #cedaea;
+  color: rgba(41, 52, 79, 0.5);
   font-size: clamp(1.3rem, 2.25vw, 2.25rem);
   text-transform: uppercase;
   font-weight: 200;
   cursor: pointer;
-  font-family: "Inconsolata";
+  font-family: "Karla";
   transition: all 0.1s ease-in-out;
 }
 .navlink:not(:last-child) {
@@ -244,23 +278,24 @@ button {
   }
 }
 .navlink.active {
-  color: #86a4c8;
-  font-weight: 300;
+  color: #5b78b0;
+  font-weight: 400;
   transform: scale(1.1);
   transition: all 0.2s ease-in-out;
 }
 
 input,
 textarea {
+  font-size: clamp(1.3rem, 2.5vw, 2.25rem);
   font-family: "Karla";
-  font-weight: 800;
-  color: #cedaea;
-  text-align: center;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
 }
 input::placeholder,
 textarea::placeholder {
-  color: rgba(206, 218, 234, 0.75);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1.6rem;
 }
 
 button {
@@ -279,52 +314,56 @@ button {
   padding: 1rem 0;
 }
 .skill-grid__name {
-  font-size: 1.25rem;
-}
-@media (max-width: 500px) {
-  .skill-grid__name {
-    font-size: 0.85rem;
-    margin-top: 0.25rem;
-  }
+  font-size: 1.5rem;
 }
 @media (max-width: 800px) {
   .skill-grid__name {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+  }
+}
+@media (max-width: 500px) {
+  .skill-grid__name {
+    font-size: 1.2rem;
     margin-top: 0.25rem;
   }
 }
 
 .form__error-message {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 1px;
   background-color: transparent;
   color: #ae6170;
   text-transform: uppercase;
-  font-family: "Inconsolata";
+  font-family: "Karla";
 }
 
 .submit__button {
-  color: rgba(206, 218, 234, 0.75);
+  color: #efefef;
   font-size: 2rem;
   font-family: "Inconsolata";
-  letter-spacing: 2px;
+  letter-spacing: 5px;
+  text-align: start;
+  font-weight: 800;
 }
 
 .project__heading--primary {
   display: inline;
-  padding: 0.25rem;
-  color: #5b78b0;
-  font-weight: 800;
+  padding: 1rem;
+  color: rgba(41, 52, 79, 0.75);
+  font-weight: 400;
   text-transform: uppercase;
   font-size: clamp(1.5rem, 3.5vw, 3rem);
+  letter-spacing: 3px;
 }
 .project__text {
+  color: rgba(0, 0, 0, 0.5);
+  width: 90%;
   font-family: "Karla";
-  font-size: clamp(1rem, 2vw, 2.5rem);
-  font-weight: 800;
-  color: rgba(206, 218, 234, 0.75);
-  letter-spacing: 1px;
+  font-size: clamp(1.2rem, 2vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 @font-face {
@@ -380,17 +419,20 @@ button {
 .header {
   height: 6rem;
   width: 100vw;
-  background-color: #29344f;
+  background-color: #e0e0e0;
   box-shadow: none;
   z-index: 1;
   position: absolute;
   top: 100vh;
-  transition: background-color 1s ease-in-out;
+  transition: box-shadow 0.75s ease-in-out;
+  box-shadow: none;
 }
 .header.fixed {
+  opacity: 1;
   position: fixed;
   top: 0;
-  background-color: #252f47;
+  box-shadow: 1px 1px 3px #cfcfcfa4;
+  background-color: #e0e0e0;
 }
 
 .navlinks {
@@ -427,34 +469,7 @@ button {
   z-index: 2;
 }
 .introduction__button {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 100%;
   margin-top: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media (max-width: 500px) {
-  .introduction__button {
-    height: 4rem;
-    width: 4rem;
-  }
-}
-.introduction__button:active .arrow-down-icon {
-  opacity: 0.25;
-  transition: all 0.1s ease-in-out;
-}
-.introduction .arrow-down-icon {
-  height: 2.5rem;
-  margin-top: 0.25rem;
-  opacity: 0.5;
-  transition: all 0.1s ease-in-out;
-}
-@media (max-width: 500px) {
-  .introduction .arrow-down-icon {
-    height: 1.75rem;
-  }
 }
 
 .about {
@@ -471,18 +486,16 @@ button {
   }
 }
 .about__img {
-  box-shadow: 1px 1px 4px #1c2336, -2px -2px 3px #364568;
-  border-radius: 15px;
-  height: 15rem;
-  width: 15rem;
+  height: 12rem;
+  width: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media (max-width: 500px) {
   .about__img {
-    height: 10rem;
-    width: 10rem;
+    height: 7rem;
+    width: 7rem;
   }
 }
 
@@ -492,7 +505,7 @@ button {
   align-content: center;
   justify-content: center;
   grid-template-columns: repeat(5, 10rem);
-  grid-gap: 0.5rem;
+  grid-gap: 1.5rem;
 }
 @media (max-width: 800px) {
   .skill-grid {
@@ -504,47 +517,54 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 32rem;
+    max-width: 35rem;
     margin-top: 1rem;
   }
 }
 .skill-grid__item {
+  min-height: 8rem;
+  min-width: 8rem;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: none;
-  height: 9rem;
-  width: 9rem;
-  border-radius: 15px;
-  box-shadow: 1px -1px 1px #1c2336, -1px 1px 1px #364568;
-  margin: 0.5rem;
-  padding: 1rem;
   z-index: 0;
 }
-@media (max-width: 500px) {
-  .skill-grid__item {
-    height: 7.25rem;
-    width: 7.25rem;
-  }
-}
-@media (max-width: 800px) {
-  .skill-grid__item {
-    height: 8rem;
-    width: 8rem;
-  }
-}
-.skill-grid__content {
-  height: 100%;
-  margin-top: 1rem;
+.skill-grid__icon {
+  height: 8rem;
+  width: 8rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  opacity: 0.75;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+}
+@media (max-width: 800px) {
+  .skill-grid__icon {
+    height: 7rem;
+    width: 7rem;
+  }
+  .skill-grid__icon svg {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .skill-grid__icon {
+    height: 6rem;
+    width: 6rem;
+  }
+  .skill-grid__icon svg {
+    height: 35px;
+    width: 35px;
+  }
 }
 .skill-grid__name {
+  margin-top: 0.5rem;
   text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .project-section {
@@ -565,22 +585,25 @@ button {
 
 .project {
   position: relative;
-  aspect-ratio: 4/4;
+  aspect-ratio: 4/3.5;
   height: auto;
-  width: 80%;
-  max-width: 75rem;
+  width: 90%;
+  max-width: 80rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem 1rem 1rem;
   background-color: inherit;
-  border-radius: 10px;
-  box-shadow: -1px 1px 1px #1c2336, 1px -1px 1px #364568;
   margin: 1rem 0;
   transform: scale(0.96);
   transition: all 0.2s ease;
 }
-@media (min-width: 1200px) {
+@media (max-width: 500px) {
+  .project {
+    aspect-ratio: 4/3.75;
+  }
+}
+@media (max-width: 800px) {
   .project {
     max-width: 95rem;
   }
@@ -604,11 +627,11 @@ button {
   opacity: 0.8;
 }
 .project .carousel:hover .carousel__navigation {
-  width: 92%;
+  width: 100%;
 }
 .project .carousel__navigation {
   position: absolute;
-  width: 101%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   top: 50%;
@@ -621,14 +644,14 @@ button {
   opacity: 0;
   position: absolute;
   height: auto;
-  width: 90%;
-  border-radius: 5px;
+  width: 100%;
   top: 50%;
   left: 50%;
+  border-radius: 3px;
 }
 .project .carousel__image.active {
   display: block;
-  opacity: 0.8;
+  opacity: 1;
   transform: translate(-50%, -50%);
 }
 .project .carousel__button {
@@ -637,8 +660,8 @@ button {
   align-items: center;
   opacity: 0.5;
   background-color: rgba(206, 218, 234, 0.5);
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 100%;
   border: none;
   box-shadow: none;
@@ -655,15 +678,16 @@ button {
 .project .carousel__button.right {
   transform: rotate(270deg);
 }
-.project .carousel__button img {
-  height: 1.25rem;
-  width: 1.25rem;
-  opacity: 0.8;
+.project .carousel__button svg {
+  height: 1.5rem;
+}
+.project .carousel__button svg path {
+  fill: rgba(255, 255, 255, 0.75);
 }
 .project__text {
   height: 20%;
   max-height: 15rem;
-  width: 87%;
+  margin-top: 1rem;
 }
 
 .contact {
@@ -673,9 +697,9 @@ button {
   min-height: calc(100vh - 12rem);
 }
 .contact__form {
-  width: 70vw;
+  width: auto;
   height: auto;
-  border-radius: 15px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -697,16 +721,13 @@ button {
 }
 .contact__form .form__error-message {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   position: absolute;
-  bottom: 1.5rem;
-  width: 80%;
-  padding: 0.25rem 0.25rem 0rem 0.25rem;
+  bottom: 1.1rem;
+  width: 100%;
+  padding: 0 1rem;
   pointer-events: none;
   user-select: none;
-}
-.contact__form .submit__button {
-  min-width: 26.5rem;
 }
 @keyframes shake {
   0%, 100% {
@@ -719,12 +740,20 @@ button {
     transform: translateX(2px);
   }
 }
+.contact .submit__button {
+  background-color: #5b78b0;
+  cursor: pointer;
+}
+.contact .submit__button:active {
+  transform: translate(1px, 1px) scale(0.95);
+  transition: all 0.05s linear;
+}
 
 .footer {
   position: relative;
   height: 12rem;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: inherit;
   z-index: 0;
 }
 .footer .icons {
@@ -746,6 +775,7 @@ button {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
 }
 .footer .icon__link:first-child {
   margin-right: 2rem;
@@ -753,6 +783,7 @@ button {
 .footer .icon__link span {
   text-transform: uppercase;
   margin-top: 0.5rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 .footer__text {
   position: absolute;
@@ -760,7 +791,7 @@ button {
   left: 1rem;
   text-transform: uppercase;
   opacity: 0.75;
-  color: #ffffff;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .home {

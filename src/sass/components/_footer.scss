@@ -5,7 +5,7 @@
   height: a.$height-footer;
   width: 100%;
 
-  background-color: a.$color-black-10;
+  background-color: inherit;
   z-index: 0;
   .icons {
     display: flex;
@@ -25,12 +25,14 @@
     flex-direction: column;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
     &:first-child {
       margin-right: 2rem;
     }
     span {
       text-transform: uppercase;
       margin-top: 0.5rem;
+      color: a.$color-black-50;
     }
   }
   &__text {
@@ -39,6 +41,6 @@
     left: 1rem;
     text-transform: uppercase;
     opacity: 0.75;
-    color: a.$color-white;
+    color: a.$color-black-50;
   }
 }

@@ -56,7 +56,7 @@ export default function Contact() {
             type="text"
             placeholder="name"
             {...register("name", {
-              required: "name required",
+              required: "please include your name",
             })}
           />
           {errors.name && (
@@ -72,10 +72,10 @@ export default function Contact() {
             type="text"
             placeholder="email"
             {...register("email", {
-              required: "email required",
+              required: "please include your email",
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                message: "enter a valid e-mail address",
+                message: "this is not a valid e-mail address",
               },
             })}
           />
@@ -93,16 +93,14 @@ export default function Contact() {
             type="text"
             placeholder="message"
             {...register("message", {
-              required: "enter message",
+              required: "please include your message",
             })}
           />
           {errors.message && (
             <p className="form__error-message">{errors.message.message}</p>
           )}
         </div>
-        <div className="form__element">
-          <input type="submit" className="submit__button" value="SEND" />
-        </div>
+        <input type="submit" className="submit__button" value="SEND" />
       </form>
     </section>
   );

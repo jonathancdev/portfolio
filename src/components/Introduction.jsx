@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { scrollTo } from "../utils/scrollTo";
-import arrowIcon from "../images/arrowdown.png";
+import Icon from "./Icon";
 import { motion, useAnimation } from "framer-motion";
 import {
   helloVariants,
@@ -27,7 +27,6 @@ export default function Introduction({ updateActiveLink }) {
     await myNameControls.start("appear");
     await webControls.start("appear");
     buttonControls.start("appear");
-    // helloControls.start("disappear");
   };
 
   const handleClick = (section) => {
@@ -77,8 +76,9 @@ export default function Introduction({ updateActiveLink }) {
           animate={buttonControls}
           onClick={() => handleClick("about")}
           className="introduction__button"
+          whileTap="tap"
         >
-          <img src={arrowIcon} alt="arrow" className="arrow-down-icon" />
+          <Icon name="arrow" />
         </motion.button>
       </div>
     </section>
